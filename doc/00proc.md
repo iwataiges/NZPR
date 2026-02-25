@@ -12,9 +12,48 @@ git clone git@github.com:iwataiges/NZPR.git
 * working on doc/template/20260224_my-reference.docx
 * to generate docx from markdown:
 ```
-pandoc doc/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260224_01_NZPR_report.docx 
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260224_01_NZPR_report.docx 
 ```
     * (files under test directory will not be synced)
+
+* python execution environment
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt 
+
+
+## 20260225 
+(update from 20251212)
+* GHGI net CO2 emissions
+* linear fitting
+```
+python scripts/20250225_01_GHGI_fitting_co2.py
+```
+- 2019 - 2023: y = a * (x-2013) + b, a = -22.71781753 b = 1170.85070326
+- 2014 - 2023 (2020除く): a = -27.69784371 b = 1220.09373201
+
+* [地球温暖化対策計画(2025/2/18)](https://www.env.go.jp/earth/ondanka/keikaku/250218.html)の概要に記された、エネルギー起源、非エネルギー起源CO2、CH4, N2O, F-gasの2030年、2040年の目安・目標: inputs/20250218plan_GWC_GHG2030_2040.xlsx
+   * 2030年: net CO2 = 677 + 70.0 - 47.7 = 699.3
+   * 2040年: net CO2 = 360 / 370 + 59 - 84 = 335 / 345
+
+* IPCC C1/C3との比較、1.5CRMとの比較
+```
+python scripts/20260225_02_plot_CO2_net_IPCC.py 
+python scripts/20260225_03_plot_CO2_net_1p5CRM.py
+```
+charts/20260225_02_plot_CO2_net_IPCC.png
+charts/20260225_03_plot_CO2_net_1p5CRM.png
+
+* GHGI CH4
+```
+python scripts/20260225_04_GHGI_fitting_ch4.py
+```
+- 2019-2023: a = -0.31787239 b=32.6578949
+- 2014-2023 (excl. 2020): a = -0.28798915 b=32.43185503
+```
+python scripts/20260225_05_plot_CH4_IPCC.py
+```
+charts/20260225_05_plot_CH4_IPCC.png
 
 
 ----
