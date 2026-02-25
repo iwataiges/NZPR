@@ -12,9 +12,9 @@ git clone git@github.com:iwataiges/NZPR.git
 * working on doc/template/20260224_my-reference.docx
 * to generate docx from markdown:
 ```
-pandoc 20260224_01_NZPR_report.md --reference-doc=template/20260224_my-reference.docx -o 20260224_01_NZPR_report.docx 
+pandoc doc/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260224_01_NZPR_report.docx 
 ```
-
+    * (files under test directory will not be synced)
 
 
 ----
