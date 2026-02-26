@@ -60,6 +60,27 @@ charts/20260225_05_plot_CH4_IPCC.png
 
 (** previous repository (GHGpath) **)
 
+## 20250506-1
+### input from GHG intentory excel file to generate GHG data frame
+```
+python scripts/20250506_05_import_GHG_data.py
+```
+ => outputs/20250506_05_ghg_data.json, outputs/20250506_05_ghg_data.xlsx
+
+## 20251203-2
+* GHGインベントリ top-level emissions json/excel
+```
+python scripts/20251203_01_extract_GHGI_ghg_toplevel.py
+```
+outputs/20251201_31_GHGI/20251203_32_GHGI_ghg_toplevel.json, --.xlsx
+
+* LULUCFを追加. id:06
+   * 参考: 2024年4月のGHGインベントリでは2013年の総排出量は1407MtCO2で、これが2035/2040NDCの基準値になっている。2025年4月のインベントリでは2013年の総排出量は1395MtCO2。
+```
+python scripts/20251205_02_extract_GHGI_ghg_toplevel.py
+```
+outputs/20251201_31_GHGI/20251205_32_GHGI_ghg_toplevel.json, --.xlsx
+
 ## 20251205
 ```
 mkdir inputs/IPCC/
