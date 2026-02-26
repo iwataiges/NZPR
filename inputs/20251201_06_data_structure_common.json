@@ -1,0 +1,174 @@
+{
+    "final_energy_consumption": {
+        "id": "#500000",
+        "id_GHGI": "02",
+        "item_name_jp": "最終エネルギー消費",
+        "level": 0
+    },
+    "industry": {
+        "id": "#600100",
+        "id_GHGI": "02_01_02",
+        "item_name_jp": "産業部門",
+        "level": 1,
+        "n_sub_energy_stat": 2,
+        "ids_to_combine_energy_stat": [
+            "#610000",
+            "#620000"
+        ],
+        "n_sub_1p5CRM": 4,
+        "ids_to_combine_1p5CRM": [
+            "#611000",
+            "#612000",
+            "#615000",
+            "#620000"
+        ]
+    },
+    "agri-forestry-fishery": {
+        "id": "#611000",
+        "id_GHGI": "02_01_02_01_01",
+        "item_name_jp": "農林水産業",
+        "level": 2
+    },
+    "mining": {
+        "id": "#612000",
+        "id_GHGI": "02_01_02_01_02",
+        "item_name_jp": "鉱業他",
+        "level": 2
+    },
+    "construction": {
+        "id": "#615000",
+        "id_GHGI": "02_01_02_01_03",
+        "item_name_jp": "建設業",
+        "level": 2
+    },
+    "manufacturing": {
+        "id": "#620000",
+        "id_GHGI": "02_01_02_02",
+        "item_name_jp": "製造業",
+        "level": 2
+    },
+    "manufacture-food-beverages-tobacco-feed": {
+        "id": "#621000",
+        "id_GHGI": "02_01_02_02_01",
+        "item_name_jp": "食品飲料製造業",
+        "level": 3
+    },
+    "manufacture-textile-mill": {
+        "id": "#622000",
+        "id_GHGI": "02_01_02_02_02",
+        "item_name_jp": "繊維工業",
+        "level": 3
+    },
+    "manufacture-pulp-paper": {
+        "id": "#624000",
+        "id_GHGI": "02_01_02_02_03",
+        "item_name_jp": "パルプ･紙･紙加工品",
+        "level": 3
+    },
+    "manufacture-chemical-oil-coal-products": {
+        "id": "#626000",
+        "id_GHGI": "02_01_02_02_04",
+        "item_name_jp": "化学工業 (含 石油石炭製品)",
+        "level": 3,
+        "n_sub_1p5CRM": 2,
+        "ids_to_combine_1p5CRM": [
+            "#626100",
+            "#626500"
+        ]
+    },
+    "manufacture-ceramic-stone-clay": {
+        "id": "#628000",
+        "id_GHGI": "02_01_02_02_05",
+        "item_name_jp": "窯業･土石製品製造業",
+        "level": 3
+    },
+    "manufacture-irol-steel": {
+        "id": "#629100",
+        "id_GHGI": "02_01_02_02_06",
+        "item_name_jp": "鉄鋼業",
+        "level": 3
+    },
+    "manufacture-non-ferrous-metal": {
+        "id": "#629300",
+        "id_GHGI": "02_01_02_02_07",
+        "item_name_jp": "非鉄金属製造業",
+        "level": 3
+    },
+    "machine_metal": {
+        "id": "#629900",
+        "id_GHGI": "02_01_02_02_08",
+        "item_name_jp": "機械（含金属製品）",
+        "level": 3,
+        "n_sub_energy_stat": 2,
+        "ids_to_combine_energy_stat": [
+            "#630000",
+            "#629500"
+        ],
+        "n_sub_1p5CRM": 9,
+        "ids_to_combine_1p5CRM": [
+            "#630100",
+            "#630200",
+            "#630300",
+            "#630400",
+            "#630500",
+            "#630600",
+            "#630700",
+            "#630900",
+            "#629500"
+        ]
+    },
+    "manufacturing_others": {
+        "id": "#640000",
+        "id_GHGI": "02_01_02_02_09",
+        "item_name_jp": "製造業（その他）",
+        "level": 3,
+        "n_sub_energy_stat": 4,
+        "ids_to_combine_energy_stat": [
+            "#623000",
+            "#625000",
+            "#627000",
+            "#641000"
+        ],
+        "n_sub_1p5CRM": 3,
+        "ids_to_combine_1p5CRM": [
+            "#623000",
+            "#625000",
+            "#627000"
+        ]
+    },
+    "commercial_industry": {
+        "id": "#650000",
+        "id_GHGI": "02_01_03",
+        "item_name_jp": "業務他 (第三次産業)",
+        "level": 1
+    },
+    "residential": {
+        "id": "#700000",
+        "id_GHGI": "02_01_05",
+        "item_name_jp": "家庭",
+        "level": 1
+    },
+    "transport": {
+        "id": "#800000",
+        "id_GHGI": "02_01_04",
+        "item_name_jp": "運輸",
+        "level": 1,
+        "n_sub_1p5CRM": 2,
+        "ids_to_combine_1p5CRM": [
+            "#810000",
+            "#850000"
+        ]
+    },
+    "passengers": {
+        "id": "#810000",
+        "id_GHGI": "02_01_04_01",
+        "item_name_jp": "旅客",
+        "level": 2
+    },
+    "freight": {
+        "id": "#850000",
+        "id_GHGI": "02_01_04_02",
+        "item_name_jp": "貨物",
+        "level": 2
+    }
+}

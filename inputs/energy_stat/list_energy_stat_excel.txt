@@ -1,0 +1,14 @@
+inputs/energy_stat/stte_2010.xlsx
+inputs/energy_stat/stte_2011.xlsx
+inputs/energy_stat/stte_2012.xlsx
+inputs/energy_stat/stte_2013.xlsx
+inputs/energy_stat/stte_2014.xlsx
+inputs/energy_stat/stte_2015.xlsx
+inputs/energy_stat/stte_2016.xlsx
+inputs/energy_stat/stte_2017.xlsx
+inputs/energy_stat/stte_2018.xlsx
+inputs/energy_stat/stte_2019.xlsx
+inputs/energy_stat/stte_2020.xlsx
+inputs/energy_stat/stte_2021.xlsx
+inputs/energy_stat/stte_2022.xlsx
+inputs/energy_stat/stte_2023.xlsx

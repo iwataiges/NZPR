@@ -77,6 +77,126 @@ python scripts/20250506_05_import_GHG_data.py
 ```
  => outputs/20250506_05_ghg_data.json, outputs/20250506_05_ghg_data.xlsx
 
+## 20250721
+
+add inputs/energy_stat/20250721_04_energy_statistics_data_structure.xlsx which contains position information for coal, oil, gas, nuclear, etc.
+
+```
+python scripts/20250721_04_import_energy_stat.py 
+```
+ => outputs/20250721_04_energy_stat_data.xlsx, 20250721_04_energy_stat_data_0_電力.json, ... 20250721_04_energy_stat_data_15_原子力発電.json
+
+## 20251020 - 21-1
+
+* inputs/energy_stat/20251020_05_energy_statistics_data_structure_co2.xlsx を更新し、エネルギー転換と統計誤差の行、総合計_電力･熱寄与間接排出配分後合計と総合計_エネルギー利用分の列を追加
+```
+python scripts/20251020_05_import_energy_stat_co2.py
+```
+=> outputs/20250721_04_energy_stat/20251020_05_energy_stat_co2_data.xlsx, ...json
+
+* 総合エネルギー統計のエネルギー起源CO2とGHGIのそれとの比較
+* エネルギー転換部門に大きな差異
+* それ以外の各部門にも <400ktCO2の差異
+* see: NZPR/20251020work/20251020_05_energy_stat_co2_data_work.xlsx (sheet: 総合計_エネルギー利用分)
+
+* CO2/GHGについては、GHG inventoryの情報を使うべきか (大きな齟齬はない)
+
+## 20251118
+inputs/1p5CRM/20231114_1p5CRM_balance_energy_co2_rev1.xlsx,
+inputs/1p5CRM/20231114_1p5CRM_steps_energy_co2_rev4.xlsx: baseyearのエネルギー消費量(N40)の修正
+
+```
+mkdir outputs/20251118_01_1p5CRM_balance_energy
+python scripts/20251118_01_import_1p5CRM_balance_energy.py 
+mkdir outputs/20251118_02_1p5CRM_balance_co2
+python scripts/20251118_02_import_1p5CRM_balance_co2.py
+
+mkdir outputs/20251118_03_1p5CRM_steps_energy
+python scripts/20251118_03_import_1p5CRM_steps_energy.py
+mkdir outputs/20251118_04_1p5CRM_steps_co2
+python scripts/20251118_04_import_1p5CRM_steps_co2.py 
+```
+
+commonデータセット
+'合計'は1.5CRMでは「合計」がエネルギー利用と同じになっているが、総合エネルギー統計を合わせるため、エネルギー利用と非エネルギー利用の和を計算
+```
+ls -1 outputs/20251118_01_1p5CRM_balance_energy/20251118_01_1p5CRM_balance_energy_data*.json > outputs/20251118_01_1p5CRM_balance_energy/list_20251118_01_1p5CRM_balance_energy_json.txt
+#python scripts/20251119_11_refine_data_structure_1p5CRM_balance_energy.py 
+```
+
+data structure update: 20251120_06_1p5CRM_data_structure.xlsx
+
+```
+python scripts/20251118_02_import_1p5CRM_balance_co2.py
+
+ls -1 outputs/20251118_02_1p5CRM_balance_co2/20251118_02_1p5CRM_balance_co2_data*.json > outputs/20251118_02_1p5CRM_balance_co2/list_20251118_02_1p5CRM_balance_co2_json.txt
+#python scripts/20251119_12_refine_data_structure_1p5CRM_balance_co2.py
+```
+
+```
+ls -1 outputs/20251118_03_1p5CRM_steps_energy/20251118_03_1p5CRM_steps_energy_data*.json > outputs/20251118_03_1p5CRM_steps_energy/list_20251118_03_1p5CRM_steps_energy_json.txt
+#python scripts/20251119_13_refine_data_structure_1p5CRM_steps_energy.py 
+
+python scripts/20251118_04_import_1p5CRM_steps_co2.py 
+ls -1 outputs/20251118_04_1p5CRM_steps_co2/20251118_04_1p5CRM_steps_co2_data*.json > outputs/20251118_04_1p5CRM_steps_co2/list_20251118_04_1p5CRM_steps_co2_json.txt
+#python scripts/20251119_14_refine_data_structure_1p5CRM_steps_co2.py
+```
+
+## 20251120
+
+commonデータセット
+総合エネルギー統計
+
+```
+#ls -1 outputs/20250721_04_energy_stat/20250721_04_energy_stat_data*.json > outputs/20251120_21_energy_stat/list_20250721_04_energy_stat_json.txt
+#python scripts/20251120_21_refine_data_structure_energy_stat.py
+
+ls -1 outputs/20250721_04_energy_stat/20251020_05_energy_stat_co2_data*.json > outputs/20251120_21_energy_stat/list_20251020_05_energy_stat_co2_json.txt
+#python scripts/20251120_22_refine_data_structure_energy_stat_co2.py 
+```
+
+CO2排出量は「総合計_電力･熱寄与間接排出配分後合計」のデータが1.5CRMと比較できるものとなる（電気・熱配分後に相当）
+
+
+### common dataset:
+* data structure definition: inputs/20251118_05_data_structure_common.json
+* 1.5CRM, balanced scenario: 
+   * energy: outputs/20251118_01_1p5CRM_balance_energy/20251119_11_1p5CRM_balance_energy_data_common*.json
+   * CO2: outputs/20251118_02_1p5CRM_balance_co2/20251119_12_1p5CRM_balance_co2_data_common*.json
+* 1.5CRM, stated-policy scenario:
+   * energy: outputs/20251118_03_1p5CRM_steps_energy/20251119_13_1p5CRM_steps_energy_data_common*.json
+   * CO2: outputs/20251118_04_1p5CRM_steps_co2/20251119_14_1p5CRM_steps_co2_data_common*.json
+* Energy Statistics:
+   * energy: outputs/20251120_21_energy_stat/20251120_21_energy_stat_data_common*.json
+   * CO2: outputs/20251120_21_energy_stat/20251120_22_energy_stat_co2_data_common*.json
+
+* note:
+   * 1.5CRMのエネルギーは「合計」がエネルギー利用と同じになっているのに対し、総合エネルギー統計では、エネルギー利用と非エネルギー利用の和になっている。common datasetでは、総合エネルギー統計に合わせ、合計はエネルギー利用と非エネルギー利用の和としている。
+   * 総合エネルギー統計及びGHGインベントリのエネルギー起源CO2排出量と一致した数値の出し方が不明
+
+## 20251201
+* common dataset definition: inputs/20251201_06_data_structure_common.json
+```
+mkdir outputs/20251201_01_1p5CRM_balance_energy
+python scripts/20251201_11_refine_data_structure_1p5CRM_balance_energy.py 
+mkdir outputs/20251201_02_1p5CRM_balance_co2
+python scripts/20251201_12_refine_data_structure_1p5CRM_balance_co2.py
+mkdir outputs/20251201_03_1p5CRM_steps_energy
+python scripts/20251201_13_refine_data_structure_1p5CRM_steps_energy.py 
+mkdir outputs/20251201_04_1p5CRM_steps_co2
+python scripts/20251201_14_refine_data_structure_1p5CRM_steps_co2.py
+
+mkdir outputs/20251201_21_energy_stat
+python scripts/20251201_21_refine_data_structure_energy_stat.py
+python scripts/20251201_22_refine_data_structure_energy_stat_co2.py 
+```
+
+common dataset of GHGI
+```
+mkdir outputs/20251201_31_GHGI
+python scripts/20251201_31_refine_data_structure_GHGI_co2.py
+```
+
 ## 20251203-2
 * GHGインベントリ top-level emissions json/excel
 ```
