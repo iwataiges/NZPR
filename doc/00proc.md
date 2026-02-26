@@ -55,7 +55,7 @@ python scripts/20260225_05_plot_CH4_IPCC.py
 ```
 charts/20260225_05_plot_CH4_IPCC.png
 
-## 20260226
+## 20260226-1
 
 * update GHG diff plots (upside down)
 ```
@@ -63,6 +63,34 @@ python scripts/20260226_03_plot_GHGI_diff.py
 python scripts/20260226_03_plot_GHGI_diff_EN.py
 ```
 charts/charts/20260226_03_plot_GHG_total_diff.png, charts/20260226_03_plot_GHG_total_diff_EN.png
+
+## 20260226-2 (update from 20260105-1, 20251218-1, 20251222)
+* total FEC, power, CO2 intensity (incl. english version). fitting from 2014 to 2023
+```
+python scripts/20260226_04_plot_energy_total.py
+20260226_04_plot_energy_total_EN.py
+20260226_05_plot_energy_elec_total.py
+20260226_05_plot_energy_elec_total_EJ.py
+20260226_11_plot_intensity_energy_total.py
+20260226_11_plot_intensity_energy_total_EN.py
+20260226_13_plot_intensity_elec_total.py
+20260226_13_plot_intensity_elec_total_EN.py
+
+```
+charts/20260226_04_plot_energy_total.png etc.
+
+* 部門別エネルギー消費量 (一覧)
+python scripts/20260226_20_plot_energy_subcat.py
+python scripts/20260226_20_plot_energy_subcat_EN.py
+* 部門別電力量 (一覧)
+python scripts/20260226_21_plot_energy_elec_subcat.py
+python scripts/20260226_21_plot_energy_elec_subcat_TWh.py # TWhで表示
+* 部門別CO2排出量 (一覧)
+python scripts/20260226_22_plot_co2_subcat_energy.py # エネルギー起源CO2
+python scripts/20260226_23_plot_co2_subcat_elec.py.  # 電力 CO2
+* 部門別排出係数　(一覧)
+python scripts/20260226_24_plot_intensity_subcat_energy.py
+python scripts/20260226_25_plot_intensity_subcat_elec.py
 
 
 
@@ -250,6 +278,38 @@ python scripts/20251208_05_plot_GHG_total_1p5CRM.py
 outputs/20251208_01_1p5CRM_GHG/20251208_04_1p5CRM_balance_GHG_data.json, --.xlsx
 outputs/20251208_01_1p5CRM_GHG/20251208_04_1p5CRM_steps_GHG_data.json, --.xlsx
 charts/20251208_05_plot_GHG_total_1p5CRM.png
+
+## 20251218-1
+
+* エネルギー起源CO2と電力について、排出係数の計算。エネバラでは、CO2排出量について、「12_総合計_エネルギー利用分」を使う。12/2に検討した、エネルギー転換部門の自家消費や損失に伴うズレがある
+
+```
+mkdir outputs/20251218_01_intensity
+python scripts/20251218_01_calc_intensity_energy_stat.py
+python scripts/20251218_02_calc_intensity_1p5CRM_balance.py
+python scripts/20251218_03_calc_intensity_1p5CRM_steps.py
+```
+outpus/20251218_01_intensity/
+20251218_01_energy_stat_intensity_data_common.xlsx
+20251218_01_energy_stat_intensity_data_common_0_電力.json
+20251218_01_energy_stat_intensity_data_common_3_エネルギー利用.json
+20251218_02_1p5CRM_balance_intensity_data_common.xlsx
+20251218_02_1p5CRM_balance_intensity_data_common_07_電力.json
+20251218_02_1p5CRM_balance_intensity_data_common_10_エネルギー利用.json
+20251218_03_1p5CRM_steps_intensity_data_common.xlsx
+20251218_03_1p5CRM_steps_intensity_data_common_07_電力.json
+20251218_03_1p5CRM_steps_intensity_data_common_10_エネルギー利用.json
+
+## 20251218-2
+
+* エネ基 エネルギー需給見通し 需要側情報: inputs/SEP/20251218_01_SEP_numbers.xlsx
+
+```
+mkdir outputs/20251218_02_SEP
+python scripts/20251218_15_import_SEP_numbers.py       
+```
+outputs/20251218_02_SEP/20251218_15_SEP_numbers.json, --.xlsx
+* 部門ごとの最終エネルギー消費量、電力需要、CO2排出量、排出係数
 
 
 ## 20260116-1
