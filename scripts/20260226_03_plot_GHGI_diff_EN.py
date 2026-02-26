@@ -1,4 +1,6 @@
 # 20251208
+# 20260120 English version
+# 20260226 upside down
 # -*- coding: utf-8 -*-
 import json
 import openpyxl
@@ -27,7 +29,7 @@ rcParams['xtick.labelsize'] = 18
 rcParams['ytick.labelsize'] = 18
 #rcParams['lines.markersize'] = 10
 rcParams['lines.linewidth'] = 3
-rcParams['font.family'] = 'Hiragino Sans'
+#rcParams['font.family'] = 'Hiragino Sans'
 rcParams['xtick.labelsize'] = 'small'
 rcParams['ytick.labelsize'] = 'small'
 
@@ -66,6 +68,7 @@ def plot(df_ghg, average):
     lw1 = 3
     lw2 = 2
     lw3 = 1.5
+    fs1 = 14
 
 #    ymin = 0.0
 #    ymax = 1420.0
@@ -87,7 +90,7 @@ def plot(df_ghg, average):
 
     # GHGI diff bars
     tx = np.array([2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023])
-    ty = df_ghg.values*-1.0
+    ty = df_ghg.values
     ax.bar(tx, ty, color=config.COL_PETER_RIVER_MED, width=0.5)
 
     # 2020 and 2021
@@ -97,27 +100,30 @@ def plot(df_ghg, average):
 
     # average (excl. 2020,2021)
     tx = np.array([xmin, 2023.5])
-    ty = np.array([average*-1.0, average*-1.0])
-    ax.plot(tx, ty, '--', color=config.COL_PETER_RIVER_DARK, linewidth=lw2)
-    ax.text(2023.75, average*-1.0, 'Average %3.1f MtCO2e/Yr' % (average*-1.0), color=config.COL_PETER_RIVER_DARK, fontsize=12, va='center', ha='left')
-    ax.text(2023.75, average*-1.0-2.5, '(Excl. 2020-2019 and 2021-2020)', color=config.COL_PETER_RIVER_DARK, fontsize=9, va='center', ha='left')
+    ty = np.array([average, average])
+    ax.plot(tx, ty, '--', color=config.COL_PETER_RIVER_DARK, linewidth=lw3)
+    tx = np.array([2029, xmax])
+    ty = np.array([average, average])
+    ax.plot(tx, ty, '--', color=config.COL_PETER_RIVER_DARK, linewidth=lw3)
+    ax.text(2023.75, average, 'Average %3.1f MtCO2e/Yr' % (average), color=config.COL_PETER_RIVER_DARK, fontsize=fs1, va='center', ha='left')
+    ax.text(2023.75, average-2.5, '(Excl. 2020-2019, 2021-2020)', color=config.COL_PETER_RIVER_DARK, fontsize=fs1-4, va='center', ha='left')
 
     # average GHG reduction required for NDC 2030
-    avg1 = (GHGI2023 - NDC2030_1) / (2030 - 2023)
-    avg2 = (GHGI2023 - NDC2030_2) / (2030 - 2023)
+    avg1 = (NDC2030_1 - GHGI2023) / (2030 - 2023)
+    avg2 = (NDC2030_2 - GHGI2023) / (2030 - 2023)
     tx = np.array([2024, 2030])
     ty1 = np.array([avg1, avg1])
     ty2 = np.array([avg2, avg2])
     ax.fill_between(tx, ty1, ty2, color=config.COL_ALIZARIN_LIGHT, alpha=0.5)
-    ax.text(2027, avg2+0.5, 'Required for NDC 2030: \n%3.1f-%3.1f MtCO2e/Yr' % (avg2, avg1), color=config.COL_ALIZARIN_MED, fontsize=12, va='bottom', ha='center')
+    ax.text(2027, avg2+0.1, 'Required for NDC 2030: \n%3.1f – %3.1f MtCO2e/Yr' % (avg2, avg1), color=config.COL_ALIZARIN_MED, fontsize=fs1, va='bottom', ha='center')
 
     # average GHG reduction required for NDC 2035
     ndc2035 = NDC2013 * 0.4
-    avg1 = (GHGI2023 - ndc2035) / (2035 - 2023)
+    avg1 = (ndc2035 - GHGI2023) / (2035 - 2023)
     tx = np.array([2024, 2035])
     ty = np.array([avg1, avg1])
     ax.plot(tx, ty, ':', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
-    ax.text(2033, avg1+0.5, 'Required for NDC 2035: \n%3.1f MtCO2e/Yr' % (avg1), color=config.COL_ALIZARIN_DARK, fontsize=12, va='bottom', ha='center')
+    ax.text(2033, avg1+0.1, 'Required for NDC 2035: \n%3.1f MtCO2e/Yr' % (avg1), color=config.COL_ALIZARIN_DARK, fontsize=fs1, va='bottom', ha='center')
 
     # average GHG reduction required for NDC 2040
 #    ndc2040 = NDC2013 * 0.27
@@ -131,16 +137,16 @@ def plot(df_ghg, average):
 #    tx = np.array([2024, 2030])
 #    ty1 = np.array([avg1, avg1])
 #    ax.plot(tx, ty, '--', color=config.COL_NEPHRITIS_MED, linewidth=lw2)
-    avg2 = (GHGI2023 - GHG_RM2035) / (2035 - 2023)
+    avg2 = (GHG_RM2035 - GHGI2023) / (2035 - 2023)
     tx = np.array([2024, 2035])
     ty = np.array([avg2, avg2])
     ax.plot(tx, ty, ':', color=config.COL_NEPHRITIS_DARK, linewidth=lw2)
-    ax.text(2033, avg2+0.5, 'Required for 1.5CRM 2035: \n%3.1f MtCO2e/Yr' % (avg2), color=config.COL_NEPHRITIS_DARK, fontsize=12, va='bottom', ha='center')
-    
-    ax.set_ylabel('GHG Reduction [MtCO2e/Year]')
+    ax.text(2032.7, avg2+0.4, 'Required for 1.5CRM 2035: \n%3.1f MtCO2e/Yr' % (avg2), color=config.COL_NEPHRITIS_DARK, fontsize=fs1, va='bottom', ha='center')
+
+    ax.set_ylabel('GHG Emission Reduction [MtCO2e/Yr]')
     plt.tight_layout()
     #plt.show()
-    plt.savefig('charts/20251208_03_plot_GHG_total_diff_EN.png')
+    plt.savefig('charts/20260226_03_plot_GHG_total_diff_EN.png')
 
 
 if __name__ == '__main__':

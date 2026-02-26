@@ -55,6 +55,16 @@ python scripts/20260225_05_plot_CH4_IPCC.py
 ```
 charts/20260225_05_plot_CH4_IPCC.png
 
+## 20260226
+
+* update GHG diff plots (upside down)
+```
+python scripts/20260226_03_plot_GHGI_diff.py
+python scripts/20260226_03_plot_GHGI_diff_EN.py
+```
+charts/charts/20260226_03_plot_GHG_total_diff.png, charts/20260226_03_plot_GHG_total_diff_EN.png
+
+
 
 ----
 
@@ -133,15 +143,6 @@ python scripts/scripts/20260116_02_plot_GHG_total_IPCC.py
 python scripts/scripts/20260116_06_plot_GHG_total_1p5CRM.py
 ```
 charts/20260116_02_plot_GHG_total_IPCC.png, 20260116_06_plot_GHG_total_1p5CRM.png
-
-## 20260120-1
-
-* 日本語版作成
-```
-python scripts/20251208_03_plot_GHGI_diff.py
-python scripts/20251208_03_plot_GHGI_diff_EN.py
-```
-charts/charts/20251208_03_plot_GHG_total_diff.png, charts/20251208_03_plot_GHG_total_diff_EN.png
 
 ## 20260122
 * GHG pathフィッティングを2014-2023 (2020除く)に
