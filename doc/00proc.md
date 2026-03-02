@@ -300,7 +300,7 @@ outpus/20251218_01_intensity/
 20251218_03_1p5CRM_steps_intensity_data_common_07_電力.json
 20251218_03_1p5CRM_steps_intensity_data_common_10_エネルギー利用.json
 
-## 20251218-2
+## 20251218-3
 
 * エネ基 エネルギー需給見通し 需要側情報: inputs/SEP/20251218_01_SEP_numbers.xlsx
 
@@ -324,9 +324,59 @@ python scripts/scripts/20260116_06_plot_GHG_total_1p5CRM.py
 ```
 charts/20260116_02_plot_GHG_total_IPCC.png, 20260116_06_plot_GHG_total_1p5CRM.png
 
+## 20260116-2
+
+* エネ基 エネルギー需給見通し 需要側情報 (id追加): inputs/SEP/20260116_02_SEP_numbers.xlsx
+
+```
+python scripts/20260116_15_import_SEP_numbers.py
+```
+outputs/20251218_02_SEP/20260116_15_SEP_numbers.json, --.xlsx
+部門ごとの最終エネルギー消費量、電力需要、CO2排出量、排出係数
+
+
 ## 20260122
 * GHG pathフィッティングを2014-2023 (2020除く)に
 ```
 python scripts/20260122_06_plot_GHG_total.py
 ```
 charts/20260122_06_plot_GHG_total.png, 20260122_06_plot_GHG_total_wo_failure2040.png (2040上振れの点なし)
+
+## 20260205
+
+* FEC for sectors, fitting 2014-2023 (excl. 2020)
+```
+python scripts/20260205_10_plot_energy_FEC_sectors.py
+```
+a:-7.859e-02 b:4.926e+00 2030:3.59 2035:3.20 産業
+a:-8.033e-02 b:4.578e+00 2030:3.21 2035:2.81 製造
+a:-4.180e-02 b:1.810e+00 2030:1.10 2035:0.89 鉄鋼
+a:-3.710e-02 b:2.221e+00 2030:1.59 2035:1.41 業務他
+a:-2.602e-02 b:1.991e+00 2030:1.55 2035:1.42 家庭
+a:-5.316e-02 b:3.232e+00 2030:2.33 2035:2.06 運輸
+charts/20260205_10_plot_energy_00_産業.png, etc.
+
+* CO2 for sectors, fitting 2014-2023 (excl. 2020)
+```
+python scripts/20260205_11_plot_co2_energy_sectors.py
+```
+a:-1.118e+01 b:4.558e+02 2030:265.80 2035:209.91 産業
+a:-1.119e+01 b:4.290e+02 2030:238.69 2035:182.71 製造
+a:-5.141e+00 b:1.831e+02 2030:95.73 2035:70.03 鉄鋼
+a:-6.199e+00 b:2.304e+02 2030:125.02 2035:94.02 業務他
+a:-5.001e+00 b:1.969e+02 2030:111.87 2035:86.86 家庭
+a:-3.883e+00 b:2.258e+02 2030:159.82 2035:140.41 運輸
+charts/20260205_11_plot_co2_energy_00_産業.png, etc.
+
+
+* CO2 intensity for sectors, fitting 2014-2023 (excl. 2020)
+```
+python scripts/20260205_13_plot_intensity_energy_sectors.py
+```
+a:-9.583e-07 b:9.289e-05 2030:7.660e-05 2035:7.181e-05 産業
+a:-9.868e-07 b:9.410e-05 2030:7.732e-05 2035:7.239e-05 製造
+a:-6.620e-07 b:1.015e-04 2030:9.026e-05 2035:8.695e-05 鉄鋼
+a:-1.285e-06 b:1.042e-04 2030:8.236e-05 2035:7.594e-05 業務他
+a:-1.403e-06 b:9.921e-05 2030:7.537e-05 2035:6.836e-05 家庭
+a:-6.285e-08 b:6.989e-05 2030:6.882e-05 2035:6.851e-05 運輸
+charts/20260205_13_plot_intensity_energy_00_産業.png, etc.
