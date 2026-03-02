@@ -199,7 +199,7 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
 
     xmin = YEAR1_START
     xmax = 2050
-    ax.text(xmax - (xmax-xmin)*0.3, ymax - (ymax-ymin)*0.07, 'CO2排出係数', color=config.COL_ASBESTOS_DARK, fontsize=24)
+    ax.text(xmax - (xmax-xmin)*0.32, ymax - (ymax-ymin)*0.07, 'CO2排出原単位', color=config.COL_ASBESTOS_DARK, fontsize=24)
     ax.text(xmax - (xmax-xmin)*0.3, ymax - (ymax-ymin)*0.11, '(エネルギー起源)', color=config.COL_ASBESTOS_DARK, fontsize=20)
     ax.set_xticks(np.arange(xmin, xmax+1, step=10))
 
