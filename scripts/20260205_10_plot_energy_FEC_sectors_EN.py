@@ -25,9 +25,9 @@ YEAR1_END   = 2024
 FIT_YEAR_START = 2014
 FIR_YEAR_END   = 2024
 
-jsonfile1_data = 'outputs/20251218_01_intensity/20251218_01_energy_stat_intensity_data_common_3_エネルギー利用.json'
-jsonfile2_data = 'outputs/20251218_01_intensity/20251218_02_1p5CRM_balance_intensity_data_common_10_エネルギー利用.json'
-jsonfile3_data = 'outputs/20251218_01_intensity/20251218_03_1p5CRM_steps_intensity_data_common_10_エネルギー利用.json'
+jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_21_energy_stat_data_common_3_エネルギー利用.json'
+jsonfile2_data = 'outputs/20251201_01_1p5CRM_balance_energy/20251201_11_1p5CRM_balance_energy_data_common_10_エネルギー利用.json'
+jsonfile3_data = 'outputs/20251201_03_1p5CRM_steps_energy/20251201_13_1p5CRM_steps_energy_data_common_10_エネルギー利用.json'
 
 jsonfile_sep_data = 'outputs/20251218_02_SEP/20260116_15_SEP_numbers.json'
 
@@ -61,32 +61,32 @@ list_subcat_to_plot = [
 ]
 n_subcat_to_plot = len(list_subcat_to_plot)
 
-#list_yrange = np.array([
-#                        [180, 470],  # 産業
-#                        [160, 450],  # 製造業
-#                        [30, 100],  # 鉄鋼業
-#                        [220, 380],  # 業務他
-#                        [120, 300],  # 家庭
-#                        [10, 180]   # 運輸
-#                        ])
+list_yrange = np.array([
+                        [1.8, 6.0],  # 産業
+                        [1.5, 4.8],  # 製造業
+                        [0.2, 1.8],  # 鉄鋼業
+                        [0.7, 2.3],  # 業務他
+                        [0.5, 2.2],  # 家庭
+                        [0.8, 3.4]   # 運輸
+                        ])
 
 list_subcatlabel = [
-    'エネルギー起源',
-    '産業',
-    '農林水産',
-    '建設',
-    '製造',
-    '繊維',
-    'パルプ･紙',
-    '化学',
-    '窯業･土石',
-    '鉄鋼',
-    '機械',
-    '業務他',
-    '家庭',
-    '運輸',
-    '旅客', 
-    '貨物',
+    'Energy-related',
+    'Industry',
+    'Agriculture, Forestry and Fisheries',
+    'Construction',
+    'Manufacturing',
+    'Textiles',
+    'Pulp and Paper',
+    'Chemical',
+    'Cement, Ceramics and Stone Products',
+    'Steel and Iron',
+    'Machinery',
+    'Commercial',
+    'Residential',
+    'Transport',
+    'Passengers', 
+    'Freight',
 ]
 
 
@@ -132,8 +132,7 @@ def load_data():
         '2050': float,
     }
     df2 = pd.read_json(jsonfile2_data, orient='index', dtype=dict2_dtype)
-    #year2_list = ['baseyear', '2030', '2040', '2050']
-    year2_list = ['2030', '2040', '2050']
+    year2_list = ['baseyear', '2030', '2040', '2050']
 
     df3 = pd.read_json(jsonfile3_data, orient='index', dtype=dict2_dtype)
 
@@ -162,14 +161,8 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         lw2 = 2
         ms = 8
 
-#        ymin = list_yrange[i][0]
-#        ymax = list_yrange[i][1]
-        ymin = 0.0
-        ymax = 1.25e-4
-#        if i < 5:
-#            ymax = 1.25e-4
-#        else:
-#            ymax = 8.0e-5
+        ymin = list_yrange[i][0]
+        ymax = list_yrange[i][1]
         ax.set(ylim=(ymin, ymax))
 
         df1_sub = df1[df1['id']==list_subcategory[idx]]
@@ -177,7 +170,7 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         df3_sub = df3[df3['id']==list_subcategory[idx]]
 
         tx = year1_range # numpy ndarray
-        ty = df1_sub[year1_list].iloc[0]
+        ty = df1_sub[year1_list].iloc[0]/1.0e6 # pandas series
 
         ax.plot(tx, ty, 'o-', color=config.COL_ASBESTOS_MED, linewidth=lw1, markersize=ms)
 
@@ -191,7 +184,7 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         df1_subsubset = df1_subsubset.drop(columns=['2020'])
         tx = np.array([2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023])
         tx = tx - 2013
-        ty = df1_subsubset.iloc[0]
+        ty = df1_subsubset.iloc[0]/1.0e6
 
         # fitting
         fit2 = np.polyfit(tx, ty, 1)
@@ -202,24 +195,20 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         ax.plot(tx, ty, '-.', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
         ty_2030 = a * (2030 - 2013) + b
         ty_2035 = a * (2035 - 2013) + b
-        print('a:%.3e b:%.3e 2030:%.3e 2035:%.3e %s' % (a, b, ty_2030, ty_2035, list_subcatlabel[idx]))
+        print('a:%.3e b:%.3e 2030:%.2f 2035:%.2f %s' % (a, b, ty_2030, ty_2035, list_subcatlabel[idx]))
 
         # 1.5CRM
-        # 2017/2018 from energy statistics
-        ty0 = (df1_subsubset['2017']+df1_subsubset['2018'])/2.0
         tx = np.array([2017.5, 2030, 2040, 2050])
-        ty1 = df2_sub[year2_list].iloc[0]
-        ty = np.concatenate([ty0, ty1])
+        ty = df2_sub[year2_list].iloc[0]/1.0e6
         ax.plot(tx, ty, 'o-', color=config.COL_TURQUOISE_MED, linewidth=lw1, markersize=ms)
-        ty1 = df3_sub[year2_list].iloc[0]
-        ty = np.concatenate([ty0, ty1])
+        ty = df3_sub[year2_list].iloc[0]/1.0e6
         ax.plot(tx, ty, 'o-', color=config.COL_ORANGE_MED, linewidth=lw1, markersize=ms)
 
         # SEP
         for j in range(6):
-            tdx = df_sep[(df_sep['Scenario']==j) & (df_sep['id']==list_subcategory[idx]) & (df_sep['Type']=='CO2 Intensity')]
+            tdx = df_sep[(df_sep['Scenario']==j) & (df_sep['id']==list_subcategory[idx]) & (df_sep['Type']=='FEC')]
             tx = tdx['Year']
-            ty = tdx['Value']
+            ty = tdx['Value']/1.0e6
             if j < 5:
                 marker = 'o'
                 col = config.COL_ALIZARIN_MED
@@ -229,22 +218,18 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
             ax.plot(tx, ty, marker, color=col, markersize=ms+1)
 
         #ax.set_title(list_subcatlabel[0])
-        ax.set_ylabel('MtCO2/TJ')
-        ax.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-        ax.set_yticks(np.arange(ymin, ymax, 5e-5))
-        minor_ticks = np.arange(ymin, ymax, 2.5e-5)
-        ax.set_yticks(minor_ticks, minor=True)
+        ax.set_ylabel('EJ')
         xmin = YEAR1_START
         xmax = 2050
         ax.set_xticks(np.arange(xmin, xmax+1, step=10))
 
-        text = 'CO2排出原単位 %s' % (list_subcatlabel[idx])
+        text = 'FEC %s' % (list_subcatlabel[idx])
         ax.text(xmax - (xmax-xmin)*0.01, ymax - (ymax-ymin)*0.07, text, color=config.COL_ASBESTOS_DARK, fontsize=24, ha='right')
 
         #ax.legend(loc='lower left')
         plt.tight_layout()
         #plt.show()
-        outputfilename = 'charts/20260205_13_plot_intensity_energy_%02d_%s.png' % (i, list_subcatlabel[idx])
+        outputfilename = 'charts/20260205_10_plot_energy_%02d_%s_EN.png' % (i, list_subcatlabel[idx])
         plt.savefig(outputfilename)
 
 if __name__ == '__main__':

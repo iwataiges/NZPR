@@ -71,22 +71,22 @@ n_subcat_to_plot = len(list_subcat_to_plot)
 #                        ])
 
 list_subcatlabel = [
-    'エネルギー起源',
-    '産業',
-    '農林水産',
-    '建設',
-    '製造',
-    '繊維',
-    'パルプ･紙',
-    '化学',
-    '窯業･土石',
-    '鉄鋼',
-    '機械',
-    '業務他',
-    '家庭',
-    '運輸',
-    '旅客', 
-    '貨物',
+    'Energy-related',
+    'Industry',
+    'Agriculture, Forestry and Fisheries',
+    'Construction',
+    'Manufacturing',
+    'Textiles',
+    'Pulp and Paper',
+    'Chemical',
+    'Cement, Ceramics and Stone Products',
+    'Steel and Iron',
+    'Machinery',
+    'Commercial',
+    'Residential',
+    'Transport',
+    'Passengers', 
+    'Freight',
 ]
 
 
@@ -238,13 +238,13 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         xmax = 2050
         ax.set_xticks(np.arange(xmin, xmax+1, step=10))
 
-        text = 'CO2排出原単位 %s' % (list_subcatlabel[idx])
+        text = 'CO2 Intensity, %s' % (list_subcatlabel[idx])
         ax.text(xmax - (xmax-xmin)*0.01, ymax - (ymax-ymin)*0.07, text, color=config.COL_ASBESTOS_DARK, fontsize=24, ha='right')
 
         #ax.legend(loc='lower left')
         plt.tight_layout()
         #plt.show()
-        outputfilename = 'charts/20260205_13_plot_intensity_energy_%02d_%s.png' % (i, list_subcatlabel[idx])
+        outputfilename = 'charts/20260205_13_plot_intensity_energy_%02d_%s_EN.png' % (i, list_subcatlabel[idx])
         plt.savefig(outputfilename)
 
 if __name__ == '__main__':

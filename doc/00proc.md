@@ -347,6 +347,7 @@ charts/20260122_06_plot_GHG_total.png, 20260122_06_plot_GHG_total_wo_failure2040
 * FEC for sectors, fitting 2014-2023 (excl. 2020)
 ```
 python scripts/20260205_10_plot_energy_FEC_sectors.py
+python scripts/20260205_10_plot_energy_FEC_sectors_EN.py
 ```
 a:-7.859e-02 b:4.926e+00 2030:3.59 2035:3.20 産業
 a:-8.033e-02 b:4.578e+00 2030:3.21 2035:2.81 製造
@@ -355,10 +356,12 @@ a:-3.710e-02 b:2.221e+00 2030:1.59 2035:1.41 業務他
 a:-2.602e-02 b:1.991e+00 2030:1.55 2035:1.42 家庭
 a:-5.316e-02 b:3.232e+00 2030:2.33 2035:2.06 運輸
 charts/20260205_10_plot_energy_00_産業.png, etc.
+chart/charts/20260205_10_plot_energy_00_Industry_EN.png, etc.
 
 * CO2 for sectors, fitting 2014-2023 (excl. 2020)
 ```
 python scripts/20260205_11_plot_co2_energy_sectors.py
+python scripts/20260205_11_plot_co2_energy_sectors_EN.py
 ```
 a:-1.118e+01 b:4.558e+02 2030:265.80 2035:209.91 産業
 a:-1.119e+01 b:4.290e+02 2030:238.69 2035:182.71 製造
@@ -367,11 +370,12 @@ a:-6.199e+00 b:2.304e+02 2030:125.02 2035:94.02 業務他
 a:-5.001e+00 b:1.969e+02 2030:111.87 2035:86.86 家庭
 a:-3.883e+00 b:2.258e+02 2030:159.82 2035:140.41 運輸
 charts/20260205_11_plot_co2_energy_00_産業.png, etc.
-
+charts/20260205_11_plot_co2_energy_00_Industry_EN.png, etc.
 
 * CO2 intensity for sectors, fitting 2014-2023 (excl. 2020)
 ```
 python scripts/20260205_13_plot_intensity_energy_sectors.py
+python scripts/20260205_13_plot_intensity_energy_sectors_EN.py
 ```
 a:-9.583e-07 b:9.289e-05 2030:7.660e-05 2035:7.181e-05 産業
 a:-9.868e-07 b:9.410e-05 2030:7.732e-05 2035:7.239e-05 製造
@@ -380,3 +384,4 @@ a:-1.285e-06 b:1.042e-04 2030:8.236e-05 2035:7.594e-05 業務他
 a:-1.403e-06 b:9.921e-05 2030:7.537e-05 2035:6.836e-05 家庭
 a:-6.285e-08 b:6.989e-05 2030:6.882e-05 2035:6.851e-05 運輸
 charts/20260205_13_plot_intensity_energy_00_産業.png, etc.
+charts/20260205_13_plot_intensity_energy_00_Industry_EN.png, etc.
