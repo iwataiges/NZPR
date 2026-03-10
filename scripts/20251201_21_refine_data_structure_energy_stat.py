@@ -8,8 +8,7 @@ import numpy as np
 #from matplotlib import rcParams
 import config 
 
-#list_json_file = 'outputs/20251120_21_energy_stat/list_20250721_04_energy_stat_json.txt'
-list_json_file = 'outputs/20250721_04_energy_stat/list_20250721_04_energy_stat_json.txt'
+list_json_file = 'outputs/20251120_21_energy_stat/list_20250721_04_energy_stat_json.txt'
 
 sheet_names = [
     '電力', '熱', '合計', 'エネルギー利用', '非エネルギー利用', '石炭', '石炭製品', '原油', 

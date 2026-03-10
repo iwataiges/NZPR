@@ -68,6 +68,10 @@ charts/charts/20260226_03_plot_GHG_total_diff.png, charts/20260226_03_plot_GHG_t
 * total FEC, power, CO2 intensity (incl. english version). fitting from 2014 to 2023
 ```
 python scripts/20260226_04_plot_energy_total.py
+```
+a:-1.949e-01 b:1.237e+01 2030:9.06 2035:8.08 
+
+```
 20260226_04_plot_energy_total_EN.py
 20260226_05_plot_energy_elec_total.py
 20260226_05_plot_energy_elec_total_EJ.py
