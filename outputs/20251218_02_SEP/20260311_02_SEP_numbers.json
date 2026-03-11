@@ -274,11 +274,281 @@
         "Scenario":0,
         "Sector":"Total",
         "id":"#500000",
+        "Type":"FEC(energy-related)",
+        "Value":9572169.5999999996,
+        "unit":"TJ"
+    },
+    "31":{
+        "Year":2040,
+        "Scenario":1,
+        "Sector":"Total",
+        "id":"#500000",
+        "Type":"FEC(energy-related)",
+        "Value":8888443.1999999993,
+        "unit":"TJ"
+    },
+    "32":{
+        "Year":2040,
+        "Scenario":2,
+        "Sector":"Total",
+        "id":"#500000",
+        "Type":"FEC(energy-related)",
+        "Value":8888443.1999999993,
+        "unit":"TJ"
+    },
+    "33":{
+        "Year":2040,
+        "Scenario":3,
+        "Sector":"Total",
+        "id":"#500000",
+        "Type":"FEC(energy-related)",
+        "Value":9230306.4000000004,
+        "unit":"TJ"
+    },
+    "34":{
+        "Year":2040,
+        "Scenario":4,
+        "Sector":"Total",
+        "id":"#500000",
+        "Type":"FEC(energy-related)",
+        "Value":9230306.4000000004,
+        "unit":"TJ"
+    },
+    "35":{
+        "Year":2040,
+        "Scenario":5,
+        "Sector":"Total",
+        "id":"#500000",
+        "Type":"FEC(energy-related)",
+        "Value":9230306.4000000004,
+        "unit":"TJ"
+    },
+    "36":{
+        "Year":2030,
+        "Scenario":0,
+        "Sector":"Industry",
+        "id":"#600100",
+        "Type":"FEC(energy-related)",
+        "Value":4107784.7999999998,
+        "unit":"TJ"
+    },
+    "37":{
+        "Year":2040,
+        "Scenario":1,
+        "Sector":"Industry",
+        "id":"#600100",
+        "Type":"FEC(energy-related)",
+        "Value":4107784.7999999998,
+        "unit":"TJ"
+    },
+    "38":{
+        "Year":2040,
+        "Scenario":2,
+        "Sector":"Industry",
+        "id":"#600100",
+        "Type":"FEC(energy-related)",
+        "Value":4107784.7999999998,
+        "unit":"TJ"
+    },
+    "39":{
+        "Year":2040,
+        "Scenario":3,
+        "Sector":"Industry",
+        "id":"#600100",
+        "Type":"FEC(energy-related)",
+        "Value":4107784.7999999998,
+        "unit":"TJ"
+    },
+    "40":{
+        "Year":2040,
+        "Scenario":4,
+        "Sector":"Industry",
+        "id":"#600100",
+        "Type":"FEC(energy-related)",
+        "Value":4401198.0,
+        "unit":"TJ"
+    },
+    "41":{
+        "Year":2040,
+        "Scenario":5,
+        "Sector":"Industry",
+        "id":"#600100",
+        "Type":"FEC(energy-related)",
+        "Value":4107784.7999999998,
+        "unit":"TJ"
+    },
+    "42":{
+        "Year":2030,
+        "Scenario":0,
+        "Sector":"Commercial",
+        "id":"#650000",
+        "Type":"FEC(energy-related)",
+        "Value":1905054.0000000002,
+        "unit":"TJ"
+    },
+    "43":{
+        "Year":2040,
+        "Scenario":1,
+        "Sector":"Commercial",
+        "id":"#650000",
+        "Type":"FEC(energy-related)",
+        "Value":1524043.2,
+        "unit":"TJ"
+    },
+    "44":{
+        "Year":2040,
+        "Scenario":2,
+        "Sector":"Commercial",
+        "id":"#650000",
+        "Type":"FEC(energy-related)",
+        "Value":1524043.2,
+        "unit":"TJ"
+    },
+    "45":{
+        "Year":2040,
+        "Scenario":3,
+        "Sector":"Commercial",
+        "id":"#650000",
+        "Type":"FEC(energy-related)",
+        "Value":1524043.2,
+        "unit":"TJ"
+    },
+    "46":{
+        "Year":2040,
+        "Scenario":4,
+        "Sector":"Commercial",
+        "id":"#650000",
+        "Type":"FEC(energy-related)",
+        "Value":1905054.0000000002,
+        "unit":"TJ"
+    },
+    "47":{
+        "Year":2040,
+        "Scenario":5,
+        "Sector":"Commercial",
+        "id":"#650000",
+        "Type":"FEC(energy-related)",
+        "Value":1905054.0000000002,
+        "unit":"TJ"
+    },
+    "48":{
+        "Year":2030,
+        "Scenario":0,
+        "Sector":"Residential",
+        "id":"#700000",
+        "Type":"FEC(energy-related)",
+        "Value":1162800.0,
+        "unit":"TJ"
+    },
+    "49":{
+        "Year":2040,
+        "Scenario":1,
+        "Sector":"Residential",
+        "id":"#700000",
+        "Type":"FEC(energy-related)",
+        "Value":1938000.0000000002,
+        "unit":"TJ"
+    },
+    "50":{
+        "Year":2040,
+        "Scenario":2,
+        "Sector":"Residential",
+        "id":"#700000",
+        "Type":"FEC(energy-related)",
+        "Value":1550400.0,
+        "unit":"TJ"
+    },
+    "51":{
+        "Year":2040,
+        "Scenario":3,
+        "Sector":"Residential",
+        "id":"#700000",
+        "Type":"FEC(energy-related)",
+        "Value":1550400.0,
+        "unit":"TJ"
+    },
+    "52":{
+        "Year":2040,
+        "Scenario":4,
+        "Sector":"Residential",
+        "id":"#700000",
+        "Type":"FEC(energy-related)",
+        "Value":1938000.0000000002,
+        "unit":"TJ"
+    },
+    "53":{
+        "Year":2040,
+        "Scenario":5,
+        "Sector":"Residential",
+        "id":"#700000",
+        "Type":"FEC(energy-related)",
+        "Value":1938000.0000000002,
+        "unit":"TJ"
+    },
+    "54":{
+        "Year":2030,
+        "Scenario":0,
+        "Sector":"Transport",
+        "id":"#800000",
+        "Type":"FEC(energy-related)",
+        "Value":2297692.7999999998,
+        "unit":"TJ"
+    },
+    "55":{
+        "Year":2040,
+        "Scenario":1,
+        "Sector":"Transport",
+        "id":"#800000",
+        "Type":"FEC(energy-related)",
+        "Value":1148846.3999999999,
+        "unit":"TJ"
+    },
+    "56":{
+        "Year":2040,
+        "Scenario":2,
+        "Sector":"Transport",
+        "id":"#800000",
+        "Type":"FEC(energy-related)",
+        "Value":1531795.2,
+        "unit":"TJ"
+    },
+    "57":{
+        "Year":2040,
+        "Scenario":3,
+        "Sector":"Transport",
+        "id":"#800000",
+        "Type":"FEC(energy-related)",
+        "Value":1531795.2,
+        "unit":"TJ"
+    },
+    "58":{
+        "Year":2040,
+        "Scenario":4,
+        "Sector":"Transport",
+        "id":"#800000",
+        "Type":"FEC(energy-related)",
+        "Value":1148846.3999999999,
+        "unit":"TJ"
+    },
+    "59":{
+        "Year":2040,
+        "Scenario":5,
+        "Sector":"Transport",
+        "id":"#800000",
+        "Type":"FEC(energy-related)",
+        "Value":1531795.2,
+        "unit":"TJ"
+    },
+    "60":{
+        "Year":2030,
+        "Scenario":0,
+        "Sector":"Total",
+        "id":"#500000",
         "Type":"Electricity Demand",
         "Value":864.0,
         "unit":"TWh"
     },
-    "31":{
+    "61":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Total",
@@ -287,7 +557,7 @@
         "Value":1040.0,
         "unit":"TWh"
     },
-    "32":{
+    "62":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Total",
@@ -296,7 +566,7 @@
         "Value":950.0,
         "unit":"TWh"
     },
-    "33":{
+    "63":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Total",
@@ -305,7 +575,7 @@
         "Value":950.0,
         "unit":"TWh"
     },
-    "34":{
+    "64":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Total",
@@ -314,7 +584,7 @@
         "Value":1080.0,
         "unit":"TWh"
     },
-    "35":{
+    "65":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Total",
@@ -323,7 +593,7 @@
         "Value":990.0,
         "unit":"TWh"
     },
-    "36":{
+    "66":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Industry",
@@ -332,7 +602,7 @@
         "Value":331.0,
         "unit":"TWh"
     },
-    "37":{
+    "67":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Industry",
@@ -341,7 +611,7 @@
         "Value":400.0,
         "unit":"TWh"
     },
-    "38":{
+    "68":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Industry",
@@ -350,7 +620,7 @@
         "Value":380.0,
         "unit":"TWh"
     },
-    "39":{
+    "69":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Industry",
@@ -359,7 +629,7 @@
         "Value":380.0,
         "unit":"TWh"
     },
-    "40":{
+    "70":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Industry",
@@ -368,7 +638,7 @@
         "Value":410.0,
         "unit":"TWh"
     },
-    "41":{
+    "71":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Industry",
@@ -377,7 +647,7 @@
         "Value":400.0,
         "unit":"TWh"
     },
-    "42":{
+    "72":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Commercial",
@@ -386,7 +656,7 @@
         "Value":300.0,
         "unit":"TWh"
     },
-    "43":{
+    "73":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Commercial",
@@ -395,7 +665,7 @@
         "Value":290.0,
         "unit":"TWh"
     },
-    "44":{
+    "74":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Commercial",
@@ -404,7 +674,7 @@
         "Value":290.0,
         "unit":"TWh"
     },
-    "45":{
+    "75":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Commercial",
@@ -413,7 +683,7 @@
         "Value":290.0,
         "unit":"TWh"
     },
-    "46":{
+    "76":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Commercial",
@@ -422,7 +692,7 @@
         "Value":300.0,
         "unit":"TWh"
     },
-    "47":{
+    "77":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Commercial",
@@ -431,7 +701,7 @@
         "Value":300.0,
         "unit":"TWh"
     },
-    "48":{
+    "78":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Residential",
@@ -440,7 +710,7 @@
         "Value":211.0,
         "unit":"TWh"
     },
-    "49":{
+    "79":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Residential",
@@ -449,7 +719,7 @@
         "Value":250.0,
         "unit":"TWh"
     },
-    "50":{
+    "80":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Residential",
@@ -458,7 +728,7 @@
         "Value":240.0,
         "unit":"TWh"
     },
-    "51":{
+    "81":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Residential",
@@ -467,7 +737,7 @@
         "Value":230.0,
         "unit":"TWh"
     },
-    "52":{
+    "82":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Residential",
@@ -476,7 +746,7 @@
         "Value":260.0,
         "unit":"TWh"
     },
-    "53":{
+    "83":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Residential",
@@ -485,7 +755,7 @@
         "Value":260.0,
         "unit":"TWh"
     },
-    "54":{
+    "84":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Transport",
@@ -494,7 +764,7 @@
         "Value":23.0,
         "unit":"TWh"
     },
-    "55":{
+    "85":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Transport",
@@ -503,7 +773,7 @@
         "Value":100.0,
         "unit":"TWh"
     },
-    "56":{
+    "86":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Transport",
@@ -512,7 +782,7 @@
         "Value":40.0,
         "unit":"TWh"
     },
-    "57":{
+    "87":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Transport",
@@ -521,7 +791,7 @@
         "Value":40.0,
         "unit":"TWh"
     },
-    "58":{
+    "88":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Transport",
@@ -530,7 +800,7 @@
         "Value":100.0,
         "unit":"TWh"
     },
-    "59":{
+    "89":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Transport",
@@ -539,7 +809,7 @@
         "Value":40.0,
         "unit":"TWh"
     },
-    "60":{
+    "90":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Total",
@@ -548,7 +818,7 @@
         "Value":677.0,
         "unit":"MtCO2"
     },
-    "61":{
+    "91":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Total",
@@ -557,7 +827,7 @@
         "Value":367.0,
         "unit":"MtCO2"
     },
-    "62":{
+    "92":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Total",
@@ -566,7 +836,7 @@
         "Value":365.0,
         "unit":"MtCO2"
     },
-    "63":{
+    "93":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Total",
@@ -575,7 +845,7 @@
         "Value":367.0,
         "unit":"MtCO2"
     },
-    "64":{
+    "94":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Total",
@@ -584,7 +854,7 @@
         "Value":365.0,
         "unit":"MtCO2"
     },
-    "65":{
+    "95":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Total",
@@ -593,7 +863,7 @@
         "Value":539.0,
         "unit":"MtCO2"
     },
-    "66":{
+    "96":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Industry",
@@ -602,7 +872,7 @@
         "Value":289.0,
         "unit":"MtCO2"
     },
-    "67":{
+    "97":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Industry",
@@ -611,7 +881,7 @@
         "Value":203.0,
         "unit":"MtCO2"
     },
-    "68":{
+    "98":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Industry",
@@ -620,7 +890,7 @@
         "Value":189.0,
         "unit":"MtCO2"
     },
-    "69":{
+    "99":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Industry",
@@ -629,7 +899,7 @@
         "Value":186.0,
         "unit":"MtCO2"
     },
-    "70":{
+    "100":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Industry",
@@ -638,7 +908,7 @@
         "Value":198.0,
         "unit":"MtCO2"
     },
-    "71":{
+    "101":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Industry",
@@ -647,7 +917,7 @@
         "Value":242.0,
         "unit":"MtCO2"
     },
-    "72":{
+    "102":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Commercial",
@@ -656,7 +926,7 @@
         "Value":116.0,
         "unit":"MtCO2"
     },
-    "73":{
+    "103":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Commercial",
@@ -665,7 +935,7 @@
         "Value":49.0,
         "unit":"MtCO2"
     },
-    "74":{
+    "104":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Commercial",
@@ -674,7 +944,7 @@
         "Value":43.0,
         "unit":"MtCO2"
     },
-    "75":{
+    "105":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Commercial",
@@ -683,7 +953,7 @@
         "Value":38.0,
         "unit":"MtCO2"
     },
-    "76":{
+    "106":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Commercial",
@@ -692,7 +962,7 @@
         "Value":51.0,
         "unit":"MtCO2"
     },
-    "77":{
+    "107":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Commercial",
@@ -701,7 +971,7 @@
         "Value":81.0,
         "unit":"MtCO2"
     },
-    "78":{
+    "108":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Residential",
@@ -710,7 +980,7 @@
         "Value":70.0,
         "unit":"MtCO2"
     },
-    "79":{
+    "109":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Residential",
@@ -719,7 +989,7 @@
         "Value":60.0,
         "unit":"MtCO2"
     },
-    "80":{
+    "110":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Residential",
@@ -728,7 +998,7 @@
         "Value":43.0,
         "unit":"MtCO2"
     },
-    "81":{
+    "111":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Residential",
@@ -737,7 +1007,7 @@
         "Value":51.0,
         "unit":"MtCO2"
     },
-    "82":{
+    "112":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Residential",
@@ -746,7 +1016,7 @@
         "Value":60.0,
         "unit":"MtCO2"
     },
-    "83":{
+    "113":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Residential",
@@ -755,7 +1025,7 @@
         "Value":84.0,
         "unit":"MtCO2"
     },
-    "84":{
+    "114":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Transport",
@@ -764,7 +1034,7 @@
         "Value":146.0,
         "unit":"MtCO2"
     },
-    "85":{
+    "115":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Transport",
@@ -773,7 +1043,7 @@
         "Value":42.0,
         "unit":"MtCO2"
     },
-    "86":{
+    "116":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Transport",
@@ -782,7 +1052,7 @@
         "Value":82.0,
         "unit":"MtCO2"
     },
-    "87":{
+    "117":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Transport",
@@ -791,7 +1061,7 @@
         "Value":79.0,
         "unit":"MtCO2"
     },
-    "88":{
+    "118":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Transport",
@@ -800,7 +1070,7 @@
         "Value":43.0,
         "unit":"MtCO2"
     },
-    "89":{
+    "119":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Transport",
@@ -809,7 +1079,7 @@
         "Value":95.0,
         "unit":"MtCO2"
     },
-    "90":{
+    "120":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Transformation",
@@ -818,7 +1088,7 @@
         "Value":56.0,
         "unit":"MtCO2"
     },
-    "91":{
+    "121":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Transformation",
@@ -827,7 +1097,7 @@
         "Value":13.0,
         "unit":"MtCO2"
     },
-    "92":{
+    "122":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Transformation",
@@ -836,7 +1106,7 @@
         "Value":9.0,
         "unit":"MtCO2"
     },
-    "93":{
+    "123":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Transformation",
@@ -845,7 +1115,7 @@
         "Value":14.0,
         "unit":"MtCO2"
     },
-    "94":{
+    "124":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Transformation",
@@ -854,7 +1124,7 @@
         "Value":13.0,
         "unit":"MtCO2"
     },
-    "95":{
+    "125":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Transformation",
@@ -863,274 +1133,274 @@
         "Value":36.0,
         "unit":"MtCO2"
     },
-    "96":{
+    "126":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Total",
         "id":"#500000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000623802,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000707259,
         "unit":"MtCO2\/TJ"
     },
-    "97":{
+    "127":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Total",
         "id":"#500000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000364174,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000412896,
         "unit":"MtCO2\/TJ"
     },
-    "98":{
+    "128":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Total",
         "id":"#500000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000362189,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000410646,
         "unit":"MtCO2\/TJ"
     },
-    "99":{
+    "129":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Total",
         "id":"#500000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000350686,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000397603,
         "unit":"MtCO2\/TJ"
     },
-    "100":{
+    "130":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Total",
         "id":"#500000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000348775,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000395436,
         "unit":"MtCO2\/TJ"
     },
-    "101":{
+    "131":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Total",
         "id":"#500000",
-        "Type":"CO2 Intensity",
-        "Value":0.000051504,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000583946,
         "unit":"MtCO2\/TJ"
     },
-    "102":{
+    "132":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Industry",
         "id":"#600100",
-        "Type":"CO2 Intensity",
-        "Value":0.0000532581,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000703542,
         "unit":"MtCO2\/TJ"
     },
-    "103":{
+    "133":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Industry",
         "id":"#600100",
-        "Type":"CO2 Intensity",
-        "Value":0.0000374097,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000494184,
         "unit":"MtCO2\/TJ"
     },
-    "104":{
+    "134":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Industry",
         "id":"#600100",
-        "Type":"CO2 Intensity",
-        "Value":0.0000348297,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000460102,
         "unit":"MtCO2\/TJ"
     },
-    "105":{
+    "135":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Industry",
         "id":"#600100",
-        "Type":"CO2 Intensity",
-        "Value":0.0000342769,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000452799,
         "unit":"MtCO2\/TJ"
     },
-    "106":{
+    "136":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Industry",
         "id":"#600100",
-        "Type":"CO2 Intensity",
-        "Value":0.0000340557,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000449878,
         "unit":"MtCO2\/TJ"
     },
-    "107":{
+    "137":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Industry",
         "id":"#600100",
-        "Type":"CO2 Intensity",
-        "Value":0.0000445968,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000589125,
         "unit":"MtCO2\/TJ"
     },
-    "108":{
+    "138":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Commercial",
         "id":"#650000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000598555,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000608907,
         "unit":"MtCO2\/TJ"
     },
-    "109":{
+    "139":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Commercial",
         "id":"#650000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000316047,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000321513,
         "unit":"MtCO2\/TJ"
     },
-    "110":{
+    "140":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Commercial",
         "id":"#650000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000277348,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000282144,
         "unit":"MtCO2\/TJ"
     },
-    "111":{
+    "141":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Commercial",
         "id":"#650000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000245098,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000249337,
         "unit":"MtCO2\/TJ"
     },
-    "112":{
+    "142":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Commercial",
         "id":"#650000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000263158,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000267709,
         "unit":"MtCO2\/TJ"
     },
-    "113":{
+    "143":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Commercial",
         "id":"#650000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000417957,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000425185,
         "unit":"MtCO2\/TJ"
     },
-    "114":{
+    "144":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Residential",
         "id":"#700000",
-        "Type":"CO2 Intensity",
+        "Type":"CO2 Intensity(energy-related)",
         "Value":0.0000601995,
         "unit":"MtCO2\/TJ"
     },
-    "115":{
+    "145":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Residential",
         "id":"#700000",
-        "Type":"CO2 Intensity",
+        "Type":"CO2 Intensity(energy-related)",
         "Value":0.0000309598,
         "unit":"MtCO2\/TJ"
     },
-    "116":{
+    "146":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Residential",
         "id":"#700000",
-        "Type":"CO2 Intensity",
+        "Type":"CO2 Intensity(energy-related)",
         "Value":0.0000277348,
         "unit":"MtCO2\/TJ"
     },
-    "117":{
+    "147":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Residential",
         "id":"#700000",
-        "Type":"CO2 Intensity",
+        "Type":"CO2 Intensity(energy-related)",
         "Value":0.0000328947,
         "unit":"MtCO2\/TJ"
     },
-    "118":{
+    "148":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Residential",
         "id":"#700000",
-        "Type":"CO2 Intensity",
+        "Type":"CO2 Intensity(energy-related)",
         "Value":0.0000309598,
         "unit":"MtCO2\/TJ"
     },
-    "119":{
+    "149":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Residential",
         "id":"#700000",
-        "Type":"CO2 Intensity",
+        "Type":"CO2 Intensity(energy-related)",
         "Value":0.0000433437,
         "unit":"MtCO2\/TJ"
     },
-    "120":{
+    "150":{
         "Year":2030,
         "Scenario":0,
         "Sector":"Transport",
         "id":"#800000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000627795,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.000063542,
         "unit":"MtCO2\/TJ"
     },
-    "121":{
+    "151":{
         "Year":2040,
         "Scenario":1,
         "Sector":"Transport",
         "id":"#800000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000361197,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000365584,
         "unit":"MtCO2\/TJ"
     },
-    "122":{
+    "152":{
         "Year":2040,
         "Scenario":2,
         "Sector":"Transport",
         "id":"#800000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000528896,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.000053532,
         "unit":"MtCO2\/TJ"
     },
-    "123":{
+    "153":{
         "Year":2040,
         "Scenario":3,
         "Sector":"Transport",
         "id":"#800000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000509546,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000515735,
         "unit":"MtCO2\/TJ"
     },
-    "124":{
+    "154":{
         "Year":2040,
         "Scenario":4,
         "Sector":"Transport",
         "id":"#800000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000369797,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000374289,
         "unit":"MtCO2\/TJ"
     },
-    "125":{
+    "155":{
         "Year":2040,
         "Scenario":5,
         "Sector":"Transport",
         "id":"#800000",
-        "Type":"CO2 Intensity",
-        "Value":0.0000612745,
+        "Type":"CO2 Intensity(energy-related)",
+        "Value":0.0000620187,
         "unit":"MtCO2\/TJ"
     }
 }

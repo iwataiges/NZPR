@@ -2,6 +2,7 @@
 # 20260105
 # 20260116
 # 20260205 fitting 2014 - 2023 (excl. 2020)
+# 20260311 update SEP data path
 # -*- coding: utf-8 -*-
 import json
 #import openpyxl
@@ -29,7 +30,7 @@ jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_22_energy_stat_co2_da
 jsonfile2_data = 'outputs/20251201_02_1p5CRM_balance_co2/20251119_12_1p5CRM_balance_co2_data_common_10_エネルギー利用.json'
 jsonfile3_data = 'outputs/20251201_04_1p5CRM_steps_co2/20251201_14_1p5CRM_steps_co2_data_common_10_エネルギー利用.json'
 
-jsonfile_sep_data = 'outputs/20251218_02_SEP/20260116_15_SEP_numbers.json'
+jsonfile_sep_data = 'outputs/20251218_02_SEP/20260311_02_SEP_numbers.json'
 
 list_subcategory = [
     '#500000', # FEC

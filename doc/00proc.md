@@ -1,104 +1,4 @@
-
-
-## 20260224
-
-* at github.com/repos/ create a new repository "NZPR"
-
-```
-cd ~/Documents/work/github
-git clone git@github.com:iwataiges/NZPR.git
-```
-
-* working on doc/template/20260224_my-reference.docx
-* to generate docx from markdown:
-```
-pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260224_01_NZPR_report.docx 
-```
-    * (files under test directory will not be synced)
-
-* python execution environment
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt 
-
-
-## 20260225 
-(update from 20251212)
-* GHGI net CO2 emissions
-* linear fitting
-```
-python scripts/20250225_01_GHGI_fitting_co2.py
-```
-- 2019 - 2023: y = a * (x-2013) + b, a = -22.71781753 b = 1170.85070326
-- 2014 - 2023 (2020除く): a = -27.69784371 b = 1220.09373201
-
-* [地球温暖化対策計画(2025/2/18)](https://www.env.go.jp/earth/ondanka/keikaku/250218.html)の概要に記された、エネルギー起源、非エネルギー起源CO2、CH4, N2O, F-gasの2030年、2040年の目安・目標: inputs/20250218plan_GWC_GHG2030_2040.xlsx
-   * 2030年: net CO2 = 677 + 70.0 - 47.7 = 699.3
-   * 2040年: net CO2 = 360 / 370 + 59 - 84 = 335 / 345
-
-* IPCC C1/C3との比較、1.5CRMとの比較
-```
-python scripts/20260225_02_plot_CO2_net_IPCC.py 
-python scripts/20260225_03_plot_CO2_net_1p5CRM.py
-```
-charts/20260225_02_plot_CO2_net_IPCC.png
-charts/20260225_03_plot_CO2_net_1p5CRM.png
-
-* GHGI CH4
-```
-python scripts/20260225_04_GHGI_fitting_ch4.py
-```
-- 2019-2023: a = -0.31787239 b=32.6578949
-- 2014-2023 (excl. 2020): a = -0.28798915 b=32.43185503
-```
-python scripts/20260225_05_plot_CH4_IPCC.py
-```
-charts/20260225_05_plot_CH4_IPCC.png
-
-## 20260226-1
-
-* update GHG diff plots (upside down)
-```
-python scripts/20260226_03_plot_GHGI_diff.py
-python scripts/20260226_03_plot_GHGI_diff_EN.py
-```
-charts/charts/20260226_03_plot_GHG_total_diff.png, charts/20260226_03_plot_GHG_total_diff_EN.png
-
-## 20260226-2 (update from 20260105-1, 20251218-1, 20251222)
-* total FEC, power, CO2 intensity (incl. english version). fitting from 2014 to 2023
-```
-python scripts/20260226_04_plot_energy_total.py
-```
-a:-1.949e-01 b:1.237e+01 2030:9.06 2035:8.08 
-
-```
-20260226_04_plot_energy_total_EN.py
-20260226_05_plot_energy_elec_total.py
-20260226_05_plot_energy_elec_total_EJ.py
-20260226_11_plot_intensity_energy_total.py
-20260226_11_plot_intensity_energy_total_EN.py
-20260226_13_plot_intensity_elec_total.py
-20260226_13_plot_intensity_elec_total_EN.py
-
-```
-charts/20260226_04_plot_energy_total.png etc.
-
-* 部門別エネルギー消費量 (一覧)
-python scripts/20260226_20_plot_energy_subcat.py
-python scripts/20260226_20_plot_energy_subcat_EN.py
-* 部門別電力量 (一覧)
-python scripts/20260226_21_plot_energy_elec_subcat.py
-python scripts/20260226_21_plot_energy_elec_subcat_TWh.py # TWhで表示
-* 部門別CO2排出量 (一覧)
-python scripts/20260226_22_plot_co2_subcat_energy.py # エネルギー起源CO2
-python scripts/20260226_23_plot_co2_subcat_elec.py.  # 電力 CO2
-* 部門別排出係数　(一覧)
-python scripts/20260226_24_plot_intensity_subcat_energy.py
-python scripts/20260226_25_plot_intensity_subcat_elec.py
-
-
-
-----
+# work log for NZPR
 
 (** previous repository (GHGpath) **)
 
@@ -304,6 +204,8 @@ outpus/20251218_01_intensity/
 20251218_03_1p5CRM_steps_intensity_data_common_07_電力.json
 20251218_03_1p5CRM_steps_intensity_data_common_10_エネルギー利用.json
 
+(20260311note: 20251218_01_energy_stat_intensityは20260311_01_energy_stat_intensityに更新)
+
 ## 20251218-3
 
 * エネ基 エネルギー需給見通し 需要側情報: inputs/SEP/20251218_01_SEP_numbers.xlsx
@@ -314,7 +216,7 @@ python scripts/20251218_15_import_SEP_numbers.py
 ```
 outputs/20251218_02_SEP/20251218_15_SEP_numbers.json, --.xlsx
 * 部門ごとの最終エネルギー消費量、電力需要、CO2排出量、排出係数
-
+(20260311note: 20260311_02_SEP_numbersに更新)
 
 ## 20260116-1
 
@@ -337,6 +239,7 @@ python scripts/20260116_15_import_SEP_numbers.py
 ```
 outputs/20251218_02_SEP/20260116_15_SEP_numbers.json, --.xlsx
 部門ごとの最終エネルギー消費量、電力需要、CO2排出量、排出係数
+(20260311note: 20260311_02_SEP_numbersに更新)
 
 
 ## 20260122
@@ -389,3 +292,136 @@ a:-1.403e-06 b:9.921e-05 2030:7.537e-05 2035:6.836e-05 家庭
 a:-6.285e-08 b:6.989e-05 2030:6.882e-05 2035:6.851e-05 運輸
 charts/20260205_13_plot_intensity_energy_00_産業.png, etc.
 charts/20260205_13_plot_intensity_energy_00_Industry_EN.png, etc.
+
+
+--------
+(working on NZPR repository)
+
+## 20260224
+
+* at github.com/repos/ create a new repository "NZPR"
+
+```
+cd ~/Documents/work/github
+git clone git@github.com:iwataiges/NZPR.git
+```
+
+* working on doc/template/20260224_my-reference.docx
+* to generate docx from markdown:
+```
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260224_01_NZPR_report.docx 
+```
+    * (files under test directory will not be synced)
+
+* python execution environment
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt 
+
+
+## 20260225 
+(update from 20251212)
+* GHGI net CO2 emissions
+* linear fitting
+```
+python scripts/20250225_01_GHGI_fitting_co2.py
+```
+- 2019 - 2023: y = a * (x-2013) + b, a = -22.71781753 b = 1170.85070326
+- 2014 - 2023 (2020除く): a = -27.69784371 b = 1220.09373201
+
+* [地球温暖化対策計画(2025/2/18)](https://www.env.go.jp/earth/ondanka/keikaku/250218.html)の概要に記された、エネルギー起源、非エネルギー起源CO2、CH4, N2O, F-gasの2030年、2040年の目安・目標: inputs/20250218plan_GWC_GHG2030_2040.xlsx
+   * 2030年: net CO2 = 677 + 70.0 - 47.7 = 699.3
+   * 2040年: net CO2 = 360 / 370 + 59 - 84 = 335 / 345
+
+* IPCC C1/C3との比較、1.5CRMとの比較
+```
+python scripts/20260225_02_plot_CO2_net_IPCC.py 
+python scripts/20260225_03_plot_CO2_net_1p5CRM.py
+```
+charts/20260225_02_plot_CO2_net_IPCC.png
+charts/20260225_03_plot_CO2_net_1p5CRM.png
+
+* GHGI CH4
+```
+python scripts/20260225_04_GHGI_fitting_ch4.py
+```
+- 2019-2023: a = -0.31787239 b=32.6578949
+- 2014-2023 (excl. 2020): a = -0.28798915 b=32.43185503
+```
+python scripts/20260225_05_plot_CH4_IPCC.py
+```
+charts/20260225_05_plot_CH4_IPCC.png
+
+## 20260226-1
+
+* update GHG diff plots (upside down)
+```
+python scripts/20260226_03_plot_GHGI_diff.py
+python scripts/20260226_03_plot_GHGI_diff_EN.py
+```
+charts/charts/20260226_03_plot_GHG_total_diff.png, charts/20260226_03_plot_GHG_total_diff_EN.png
+
+## 20260226-2 (update from 20260105-1, 20251218-1, 20251222)
+* total FEC, power, CO2 intensity (incl. english version). fitting from 2014 to 2023
+```
+python scripts/20260226_04_plot_energy_total.py
+```
+a:-1.949e-01 b:1.237e+01 2030:9.06 2035:8.08 
+
+```
+20260226_04_plot_energy_total_EN.py
+20260226_05_plot_energy_elec_total.py
+20260226_05_plot_energy_elec_total_EJ.py
+20260226_11_plot_intensity_energy_total.py
+20260226_11_plot_intensity_energy_total_EN.py
+20260226_13_plot_intensity_elec_total.py
+20260226_13_plot_intensity_elec_total_EN.py
+
+```
+charts/20260226_04_plot_energy_total.png etc.
+
+* 部門別エネルギー消費量 (一覧)
+python scripts/20260226_20_plot_energy_subcat.py
+python scripts/20260226_20_plot_energy_subcat_EN.py
+* 部門別電力量 (一覧)
+python scripts/20260226_21_plot_energy_elec_subcat.py
+python scripts/20260226_21_plot_energy_elec_subcat_TWh.py # TWhで表示
+* 部門別CO2排出量 (一覧)
+python scripts/20260226_22_plot_co2_subcat_energy.py # エネルギー起源CO2
+python scripts/20260226_23_plot_co2_subcat_elec.py.  # 電力 CO2
+* 部門別排出係数　(一覧)
+python scripts/20260226_24_plot_intensity_subcat_energy.py
+python scripts/20260226_25_plot_intensity_subcat_elec.py
+
+## 20260311
+* update energy_stat_intensity
+```
+python scripts/20260311_01_calc_intensity_energy_stat.py
+```
+outputs/20251218_01_intensity/20260311_01_energy_stat_intensity_data_common_0_電力.json
+outputs/20251218_01_intensity/20260311_01_energy_stat_intensity_data_common_2_合計.json
+outputs/20251218_01_intensity/20260311_01_energy_stat_intensity_data_common_3_エネルギー利用.json
+outputs/20251218_01_intensity/20260311_01_energy_stat_intensity_data_common_4_非エネルギー利用.json
+outputs/20251218_01_intensity/20260311_01_energy_stat_intensity_data_common.xlsx
+
+* update SEP numbers
+```
+python scripts/20260311_02_import_SEP_numbers.py
+```
+outputs/20251218_02_SEP/20260311_02_SEP_numbers.json, 20260311_02_SEP_numbers.xlsx
+
+* update plots
+```
+python scripts/20260226_04_plot_energy_total.py
+python scripts/20260226_04_plot_energy_total_EN.py
+python scripts/20260226_11_plot_intensity_energy_total.py
+python scripts/20260226_11_plot_intensity_energy_total_EN.py
+python scripts/20260226_20_plot_energy_subcat.py
+python scripts/20260226_24_plot_intensity_subcat_energy.py
+python scripts/20260205_10_plot_energy_FEC_sectors.py
+python scripts/20260205_10_plot_energy_FEC_sectors_EN.py
+python scripts/20260205_11_plot_co2_energy_sectors.py
+python scripts/20260205_11_plot_co2_energy_sectors_EN.py
+python scripts/20260205_13_plot_intensity_energy_sectors.py
+python scripts/20260205_13_plot_intensity_energy_sectors_EN.py
+```

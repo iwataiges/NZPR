@@ -2,6 +2,7 @@
 # 20260105
 # 20260116
 # 20260205 fitting 2014 - 2023 (excl. 2020)
+# 20260311
 # -*- coding: utf-8 -*-
 import json
 #import openpyxl
@@ -29,7 +30,7 @@ jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_21_energy_stat_data_c
 jsonfile2_data = 'outputs/20251201_01_1p5CRM_balance_energy/20251201_11_1p5CRM_balance_energy_data_common_10_エネルギー利用.json'
 jsonfile3_data = 'outputs/20251201_03_1p5CRM_steps_energy/20251201_13_1p5CRM_steps_energy_data_common_10_エネルギー利用.json'
 
-jsonfile_sep_data = 'outputs/20251218_02_SEP/20260116_15_SEP_numbers.json'
+jsonfile_sep_data = 'outputs/20251218_02_SEP/20260311_02_SEP_numbers.json'
 
 list_subcategory = [
     '#500000', # FEC
@@ -206,7 +207,7 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
 
         # SEP
         for j in range(6):
-            tdx = df_sep[(df_sep['Scenario']==j) & (df_sep['id']==list_subcategory[idx]) & (df_sep['Type']=='FEC')]
+            tdx = df_sep[(df_sep['Scenario']==j) & (df_sep['id']==list_subcategory[idx]) & (df_sep['Type']=='FEC(energy-related)')]
             tx = tdx['Year']
             ty = tdx['Value']/1.0e6
             if j < 5:
