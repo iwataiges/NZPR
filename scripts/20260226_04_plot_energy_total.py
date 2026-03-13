@@ -178,7 +178,8 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
     ax.plot(tx, ty, '-.', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
     ty_2030 = a * (2030 - 2013) + b
     ty_2035 = a * (2035 - 2013) + b
-    print('a:%.3e b:%.3e 2030:%.2f 2035:%.2f ' % (a, b, ty_2030, ty_2035))
+    ty_2040 = a * (2040 - 2013) + b
+    print('a:%.3e b:%.3e 2030:%.2f 2035:%.2f 2040:%.2f' % (a, b, ty_2030, ty_2035, ty_2040))
 
     # 1.5CRM
     tx = np.array([2017.5, 2030, 2040, 2050])

@@ -34,7 +34,7 @@ jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_22_energy_stat_co2_da
 jsonfile2_data = 'outputs/20251201_02_1p5CRM_balance_co2/20251119_12_1p5CRM_balance_co2_data_common_10_エネルギー利用.json'
 jsonfile3_data = 'outputs/20251201_04_1p5CRM_steps_co2/20251201_14_1p5CRM_steps_co2_data_common_10_エネルギー利用.json'
 
-jsonfile_sep_data = 'outputs/20251218_02_SEP/20251218_15_SEP_numbers.json'
+jsonfile_sep_data = 'outputs/20251218_02_SEP/20260311_02_SEP_numbers.json'
 
 # 
 list_subcategory = [
@@ -190,6 +190,10 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         tx = np.array([FIT_YEAR_START, 2050])
         ty = a*(tx - 2013) + b
         ax.plot(tx, ty, '-.', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
+        ty_2030 = a * (2030 - 2013) + b
+        ty_2035 = a * (2035 - 2013) + b
+        ty_2040 = a * (2040 - 2013) + b
+        print('id:%s a:%.3e b:%.3e 2030:%.2f 2035:%.2f 2040:%.2f' % (list_subcategory[i], a, b, ty_2030, ty_2035, ty_2040))
 
         # 1.5CRM
         tx = np.array([2017.5, 2030, 2040, 2050])
