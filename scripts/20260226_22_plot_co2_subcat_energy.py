@@ -1,5 +1,5 @@
 # 20251218 / 1222
-# 20260226
+# 20260226 / 0317
 # -*- coding: utf-8 -*-
 import json
 #import openpyxl
@@ -30,7 +30,8 @@ YEAR1_END   = 2024
 FIT_YEAR_START = 2014
 FIR_YEAR_END   = 2024
 
-jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_22_energy_stat_co2_data_common_12_総合計_エネルギー利用分.json'
+#jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_22_energy_stat_co2_data_common_12_総合計_エネルギー利用分.json'
+jsonfile1_data = 'outputs/20251201_21_energy_stat/20260316_32_energy_stat_co2_data_common_12_総合計_エネルギー利用分_RD.json'
 jsonfile2_data = 'outputs/20251201_02_1p5CRM_balance_co2/20251119_12_1p5CRM_balance_co2_data_common_10_エネルギー利用.json'
 jsonfile3_data = 'outputs/20251201_04_1p5CRM_steps_co2/20251201_14_1p5CRM_steps_co2_data_common_10_エネルギー利用.json'
 

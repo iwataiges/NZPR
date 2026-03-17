@@ -3,6 +3,7 @@
 # 20260116
 # 20260205 fitting 2014 - 2023 (excl. 2020)
 # 20260311 update SEP data path
+# 20260317 update ES data
 # -*- coding: utf-8 -*-
 import json
 #import openpyxl
@@ -26,7 +27,7 @@ YEAR1_END   = 2024
 FIT_YEAR_START = 2014
 FIR_YEAR_END   = 2024
 
-jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_22_energy_stat_co2_data_common_12_総合計_エネルギー利用分.json'
+jsonfile1_data = 'outputs/20251201_21_energy_stat/20260316_32_energy_stat_co2_data_common_12_総合計_エネルギー利用分_RD.json'
 jsonfile2_data = 'outputs/20251201_02_1p5CRM_balance_co2/20251119_12_1p5CRM_balance_co2_data_common_10_エネルギー利用.json'
 jsonfile3_data = 'outputs/20251201_04_1p5CRM_steps_co2/20251201_14_1p5CRM_steps_co2_data_common_10_エネルギー利用.json'
 
@@ -63,11 +64,11 @@ list_subcat_to_plot = [
 n_subcat_to_plot = len(list_subcat_to_plot)
 
 list_yrange = np.array([
-                        [0, 470],  # 産業
-                        [0, 470],  # 製造業
+                        [0, 520],  # 産業
+                        [0, 520],  # 製造業
                         [0, 200],  # 鉄鋼業
-                        [0, 250],  # 業務他
-                        [0, 220],  # 家庭
+                        [0, 270],  # 業務他
+                        [0, 250],  # 家庭
                         [0, 250]   # 運輸
                         ])
 
@@ -197,7 +198,8 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         ax.plot(tx, ty, '-.', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
         ty_2030 = a * (2030 - 2013) + b
         ty_2035 = a * (2035 - 2013) + b
-        print('a:%.3e b:%.3e 2030:%.2f 2035:%.2f %s' % (a, b, ty_2030, ty_2035, list_subcatlabel[idx]))
+        ty_2040 = a * (2040 - 2013) + b
+        print('a:%.3e b:%.3e 2030:%.2f 2035:%.2f 2040:%.2f %s' % (a, b, ty_2030, ty_2035, ty_2040, list_subcatlabel[idx]))
 
         # 1.5CRM
         # 2017/2018 from energy statistics

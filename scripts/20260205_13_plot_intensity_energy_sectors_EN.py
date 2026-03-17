@@ -2,7 +2,7 @@
 # 20260105
 # 20260116
 # 20260205 fitting 2014 - 2023 (excl. 2020)
-# 20260311
+# 20260311 / 0317
 # -*- coding: utf-8 -*-
 import json
 #import openpyxl
@@ -26,7 +26,7 @@ YEAR1_END   = 2024
 FIT_YEAR_START = 2014
 FIR_YEAR_END   = 2024
 
-jsonfile1_data = 'outputs/20251218_01_intensity/20260311_01_energy_stat_intensity_data_common_3_エネルギー利用.json'
+jsonfile1_data = 'outputs/20251218_01_intensity/20260316_32_energy_stat_intensity_data_common_3_エネルギー利用_RD.json'
 jsonfile2_data = 'outputs/20251218_01_intensity/20251218_02_1p5CRM_balance_intensity_data_common_10_エネルギー利用.json'
 jsonfile3_data = 'outputs/20251218_01_intensity/20251218_03_1p5CRM_steps_intensity_data_common_10_エネルギー利用.json'
 
@@ -203,7 +203,8 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         ax.plot(tx, ty, '-.', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
         ty_2030 = a * (2030 - 2013) + b
         ty_2035 = a * (2035 - 2013) + b
-        print('a:%.3e b:%.3e 2030:%.3e 2035:%.3e %s' % (a, b, ty_2030, ty_2035, list_subcatlabel[idx]))
+        ty_2040 = a * (2040 - 2013) + b
+        print('a:%.3e b:%.3e 2030:%.3e 2035:%.3e 2040:%.3e %s' % (a, b, ty_2030, ty_2035, ty_2040, list_subcatlabel[idx]))
 
         # 1.5CRM
         # 2017/2018 from energy statistics
