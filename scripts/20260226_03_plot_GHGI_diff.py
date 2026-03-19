@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib import rcParams
 import config 
 from matplotlib.ticker import MaxNLocator, MultipleLocator
+from matplotlib.patches import ArrowStyle
 
 GHGI_DIFF_JSON_FILE  = 'outputs/20251201_31_GHGI/20251208_02_GHGI_ghg_toplevel_diff.json'
 
@@ -65,7 +66,7 @@ def get_average_diff(df_ghg):
 def plot(df_ghg, average):
     fig, ax = plt.subplots(figsize=(12, 8))
 
-    lw1 = 3
+    lw1 = 2.5
     lw2 = 2
     lw3 = 1.5
     fs1 = 16
@@ -123,7 +124,11 @@ def plot(df_ghg, average):
     tx = np.array([2024, 2035])
     ty = np.array([avg1, avg1])
     ax.plot(tx, ty, ':', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
-    ax.text(2033, avg1+0.1, '2035年NDCに必要: \n%3.1f MtCO2e/年' % (avg1), color=config.COL_ALIZARIN_DARK, fontsize=fs1, va='bottom', ha='center')
+    #ax.text(2033, avg1+0.1, '2035年NDCに必要: \n%3.1f MtCO2e/年' % (avg1), color=config.COL_ALIZARIN_DARK, fontsize=fs1, va='bottom', ha='center')
+    ax.text(2033, avg1-4.5, '2035年NDCに必要: \n%3.1f MtCO2e/年' % (avg1), color=config.COL_ALIZARIN_DARK, fontsize=fs1, va='center', ha='center')
+    ## arrow
+    arrow_style = ArrowStyle('<|-|>', head_length=0.1,head_width=0.1, widthA=lw1, widthB=lw1)
+    ax.annotate('', xy=[2031, avg1], xytext=[2031,average], arrowprops=dict(arrowstyle=arrow_style, color=config.COL_ALIZARIN_DARK, linewidth=lw1))
 
     # average GHG reduction required for NDC 2040
 #    ndc2040 = NDC2013 * 0.27
@@ -141,7 +146,11 @@ def plot(df_ghg, average):
     tx = np.array([2024, 2035])
     ty = np.array([avg2, avg2])
     ax.plot(tx, ty, ':', color=config.COL_NEPHRITIS_DARK, linewidth=lw2)
-    ax.text(2033, avg2+0.4, '1.5CRM 2035に必要: \n%3.1f MtCO2e/年' % (avg2), color=config.COL_NEPHRITIS_DARK, fontsize=fs1, va='bottom', ha='center')
+    #ax.text(2033, avg2+0.4, '1.5CRM 2035に必要: \n%3.1f MtCO2e/年' % (avg2), color=config.COL_NEPHRITIS_DARK, fontsize=fs1, va='bottom', ha='center')
+    ax.text(2032.5, avg2-4.5, '1.5CRM 2035に必要: \n%3.1f MtCO2e/年' % (avg2), color=config.COL_NEPHRITIS_DARK, fontsize=fs1, va='center', ha='center')
+    ## arrow
+    arrow_style = ArrowStyle('<|-|>', head_length=0.1,head_width=0.1, widthA=lw1, widthB=lw1)
+    ax.annotate('', xy=[2030.5, avg2], xytext=[2030.5,average], arrowprops=dict(arrowstyle=arrow_style, color=config.COL_NEPHRITIS_DARK, linewidth=lw1))
 
     ax.set_ylabel('GHG排出削減量 [MtCO2e/年]')
     plt.tight_layout()

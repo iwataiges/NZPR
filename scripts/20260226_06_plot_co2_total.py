@@ -1,5 +1,6 @@
 # 20250930 / 1215 / 1222
-# 20260105 / 0226
+# 20260105 / 0226 / 0311
+# 20260319
 # -*- coding: utf-8 -*-
 import json
 #import openpyxl
@@ -15,10 +16,7 @@ rcParams['xtick.labelsize'] = 20
 rcParams['ytick.labelsize'] = 20
 #rcParams['lines.markersize'] = 10
 rcParams['lines.linewidth'] = 3
-#rcParams['font.family'] = 'Hiragino Sans'
-#rcParams['xtick.labelsize'] = 'small'
-#rcParams['ytick.labelsize'] = 'small'
-
+rcParams['font.family'] = 'Hiragino Sans'
 
 YEAR1_START = 2010
 YEAR1_END   = 2024
@@ -26,9 +24,9 @@ YEAR1_END   = 2024
 FIT_YEAR_START = 2014
 FIR_YEAR_END   = 2024
 
-jsonfile1_data = 'outputs/20251201_21_energy_stat/20251201_21_energy_stat_data_common_3_エネルギー利用.json'
-jsonfile2_data = 'outputs/20251201_01_1p5CRM_balance_energy/20251201_11_1p5CRM_balance_energy_data_common_10_エネルギー利用.json'
-jsonfile3_data = 'outputs/20251201_03_1p5CRM_steps_energy/20251201_13_1p5CRM_steps_energy_data_common_10_エネルギー利用.json'
+jsonfile1_data = 'outputs/20251201_21_energy_stat/20260316_32_energy_stat_co2_data_common_12_総合計_エネルギー利用分_RD.json'
+jsonfile2_data = 'outputs/20251201_02_1p5CRM_balance_co2/20251119_12_1p5CRM_balance_co2_data_common_10_エネルギー利用.json'
+jsonfile3_data = 'outputs/20251201_04_1p5CRM_steps_co2/20251201_14_1p5CRM_steps_co2_data_common_10_エネルギー利用.json'
 
 jsonfile_sep_data = 'outputs/20251218_02_SEP/20260311_02_SEP_numbers.json'
 
@@ -53,7 +51,7 @@ list_subcategory = [
 n_subcategory = len(list_subcategory)
 
 list_subcatlabel = [
-    'FEC (エネルギー起源)',
+    'エネルギー起源CO2',
     '産業',
     '農林水産',
     '建設',
@@ -147,16 +145,16 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
     lw2 = 2
     ms = 8
 
-    ymin = 4.5
-    ymax = 13.5
-    ax.set(ylim=(ymin, ymax))
+    ymin = 0.0
+    ymax = 1420.0
+    ax.set_ylim(ymin, ymax)
 
     df1_sub = df1[df1['id']==list_subcategory[0]]
     df2_sub = df2[df2['id']==list_subcategory[0]]
     df3_sub = df3[df3['id']==list_subcategory[0]]
 
     tx = year1_range # numpy ndarray
-    ty = df1_sub[year1_list].iloc[0]/1.0e6 # pandas series
+    ty = df1_sub[year1_list].iloc[0]
 
     ax.plot(tx, ty, 'o-', color=config.COL_ASBESTOS_MED, linewidth=lw1, markersize=ms)
 
@@ -170,7 +168,7 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
     df1_subsubset = df1_subsubset.drop(columns=['2020'])
     tx = np.array([2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023])
     tx = tx - 2013
-    ty = df1_subsubset.iloc[0]/1.0e6
+    ty = df1_subsubset.iloc[0]
 
     # fitting
     fit2 = np.polyfit(tx, ty, 1)
@@ -179,19 +177,24 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
     tx = np.array([FIT_YEAR_START, 2050])
     ty = a*(tx - 2013) + b
     ax.plot(tx, ty, '-.', color=config.COL_POMEGRANATE_MED, linewidth=lw2)
+    ty_2030 = a * (2030 - 2013) + b
+    ty_2035 = a * (2035 - 2013) + b
+    ty_2040 = a * (2040 - 2013) + b
+    print('a:%.3e b:%.3e 2030:%.2f 2035:%.2f 2040:%.2f' % (a, b, ty_2030, ty_2035, ty_2040))
 
     # 1.5CRM
     tx = np.array([2017.5, 2030, 2040, 2050])
-    ty = df2_sub[year2_list].iloc[0]/1.0e6
+    ty = df2_sub[year2_list].iloc[0]
     ax.plot(tx, ty, 'o-', color=config.COL_TURQUOISE_MED, linewidth=lw1, markersize=ms)
-    ty = df3_sub[year2_list].iloc[0]/1.0e6
+    ty = df3_sub[year2_list].iloc[0]
     ax.plot(tx, ty, 'o-', color=config.COL_ORANGE_MED, linewidth=lw1, markersize=ms)
 
     # SEP
     for j in range(6):
-        tdx = df_sep[(df_sep['Scenario']==j) & (df_sep['Sector']==sector_str[0]) & (df_sep['Type']=='FEC(energy-related)')]
+        tdx = df_sep[(df_sep['Scenario']==j) & (df_sep['Sector']==sector_str[0]) & (df_sep['Type']=='CO2 Emissions')]
         tx = tdx['Year']
-        ty = tdx['Value']/1.0e6
+#        ty = tdx['Value']*energy_frac/1.0e6
+        ty = tdx['Value']
         if j < 5:
             marker = 'o'
             col = config.COL_ALIZARIN_MED
@@ -201,16 +204,16 @@ def plot(df1, df2, df3, year1_list, year2_list, df_sep):
         ax.plot(tx, ty, marker, color=col, markersize=ms+1)
 
     #ax.set_title(list_subcatlabel[0])
-    ax.set_ylabel('EJ')
+    ax.set_ylabel('MtCO2')
     xmin = YEAR1_START
     xmax = 2050
     ax.set_xticks(np.arange(xmin, xmax+1, step=10))
-    ax.text(xmax - (xmax-xmin)*0.44, ymax - (ymax-ymin)*0.07, 'FEC (Energy-related)', color=config.COL_ASBESTOS_DARK, fontsize=24)
+    ax.text(xmax - (xmax-xmin)*0.45, ymax - (ymax-ymin)*0.07, 'CO2 (エネルギー起源)', color=config.COL_ASBESTOS_DARK, fontsize=24)
 
     #ax.legend(loc='lower left')
     plt.tight_layout()
     #plt.show()
-    plt.savefig('charts/20260226_04_plot_energy_total_EN.png')
+    plt.savefig('charts/20260226_06_plot_co2_energy_total.png')
 
 if __name__ == '__main__':
     df1, df2, df3, year1_list, year2_list = load_data()
