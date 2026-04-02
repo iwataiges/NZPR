@@ -615,3 +615,96 @@ charts/
 20260318_10_NZPR_sector_summary_calc_FEC_2030.png, 20260318_10_NZPR_sector_summary_calc_FEC_2040.png
 20260318_11_NZPR_sector_summary_calc_co2_2030.png, 20260318_11_NZPR_sector_summary_calc_co2_2040.png
 20260318_12_NZPR_sector_summary_calc_intensity_2030.png, 20260318_12_NZPR_sector_summary_calc_intensity_2040.png
+
+## 20260325
+
+* 電力がエネルギー利用FECに占める割合
+* 総合エネルギー統計
+```
+python scripts/20260325_01_plot_energy_stat_FEC_elec_fraction.py
+```
+* 1.5CRM 2040年
+```
+python scripts/20260325_02_plot_1p5CRM_FEC_elec_fraction.py
+```
+charts/20260325_01_plot_energy_stat_FEC_elec_fraction.png
+charts/20260325_02_plot_1p5CRM_FEC_elec_fraction2040.png
+
+
+## 20260331 電力脱炭素化関係プロット
+
+* PV導入容量, 2014-2023/2024実績の直線フィットを延長
+```
+python scripts/20260331_01_fit_PVaddition.py
+```
+エネルギー白書:
+a=-0.5723732700302341 b=1161.2734400681265
+IRENA:
+a=-0.6617114090909526 b=1342.9046076819059
+
+年, エネルギー白書, IRENA
+2030 85.266  97.679 
+2035 85.266  97.679 
+2040 85.266  97.679 
+(増加量が0なので増えない)
+
+2019-2023の導入量の平均: エネルギー白書: 4.73 GW/yr, IRENA: 5.28 GW/yr
+この増加量を維持した場合
+年, エネルギー白書, IRENA
+2030 110.1823697 121.2925326
+2035 133.85553 147.7018656
+2040 157.5286904 174.1111986
+(see 20250820_02_再エネ導入量_work.xlsx)
+IRENAの数字を利用
+
+* 風力はIRENA(エネルギー白書では陸上/洋上の区別なし)
+=> inputs/RE/20260331_05_RE_cap_for_plot.xlsx
+```
+python scripts/20260331_01_plot_RE_bars_capacity.py 
+```
+charts/20260331_01_plot_RE_bars_capacity.png
+
+
+* 電力量, IRENAのデータを利用。2014-2023の実績の直線フィットの延長と、2019-2023の平均の継続
+```
+python scripts/20260331_02_fit_REpower_addition.py 
+```
+# Year,PV(extrapolation),PV(average),OnSW(extrapolation),OnSW(average)
+2023  60405.91  96459.48    7276.01  10386.99 
+2024  68566.79 103217.84    7864.13  10989.14 
+2025  76727.68 109976.20    8452.26  11591.29 
+2026  84888.57 116734.56    9040.39  12193.45 
+2027  93049.46 123492.93    9628.51  12795.60 
+2028 101210.34 130251.29   10216.64  13397.75 
+2029 109371.23 137009.65   10804.77  13999.90 
+2030 117532.12 143768.01   11392.90  14602.05 
+2031 125693.01 150526.37   11981.02  15204.21 
+2032 133853.89 157284.73   12569.15  15806.36 
+2033 142014.78 164043.10   13157.28  16408.51 
+2034 150175.67 170801.46   13745.40  17010.66 
+2035 158336.56 177559.82   14333.53  17612.82 
+2036 166497.45 184318.18   14921.66  18214.97 
+2037 174658.33 191076.54   15509.78  18817.12 
+2038 182819.22 197834.90   16097.91  19419.27 
+2039 190980.11 204593.26   16686.04  20021.42 
+2040 199141.00 211351.63   17274.17  20623.58 
+=> inputs/RE/20260331_05_RE_power_for_plot.xlsx
+
+```
+python scripts/20260331_02_plot_RE_bars_power.py 
+```
+charts/20260331_02_plot_RE_bars_power.png
+
+* 太陽光、陸上風力、洋上風力 設備容量
+```
+python scripts/20260331_03_plot_RE_bars_capacity_separate.py 
+```
+charts/20260331_03_plot_RE_bars_capacity_separate.png
+
+## 20260401
+
+* RE power, 1.5CRM (steps, balance, balance-sub) and energy stat
+```
+python scripts/20260401_01_plot_RE_power.py
+```
+charts/20260401_01_plot_IGESRM_RE_power.png
