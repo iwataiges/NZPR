@@ -708,3 +708,16 @@ charts/20260331_03_plot_RE_bars_capacity_separate.png
 python scripts/20260401_01_plot_RE_power.py
 ```
 charts/20260401_01_plot_IGESRM_RE_power.png
+
+## 20260408
+* OCCTO電力需要見通し
+```
+python scripts/20260408_01_import_OCCTO_power_demand.py 
+```
+outputs/20251231_01_OCCTO/20260408_01_OCCTO_power_demand.json
+
+* power demand, simplified
+```
+python scripts/20260408_01_plot_bars_power_demand.py
+```
+charts/20260408_01_plot_bars_power_demand.png
