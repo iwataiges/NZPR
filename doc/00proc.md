@@ -309,7 +309,7 @@ git clone git@github.com:iwataiges/NZPR.git
 * working on doc/template/20260224_my-reference.docx
 * to generate docx from markdown:
 ```
-pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260224_01_NZPR_report.docx 
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260430_01_NZPR_report.docx 
 ```
     * (files under test directory will not be synced)
 
@@ -721,3 +721,11 @@ outputs/20251231_01_OCCTO/20260408_01_OCCTO_power_demand.json
 python scripts/20260408_01_plot_bars_power_demand.py
 ```
 charts/20260408_01_plot_bars_power_demand.png
+
+## 20260430
+
+* 2040年の太陽光・風力発電量(エネ基、1.5CRMバランス・バランスサブ)
+```
+python scripts/20260430_01_plot_bars_power_PV_Wind_2040.py
+```
+charts/20260430_01_plot_bars_power_PV_Wind_2040.png
