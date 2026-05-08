@@ -729,3 +729,8 @@ charts/20260408_01_plot_bars_power_demand.png
 python scripts/20260430_01_plot_bars_power_PV_Wind_2040.py
 ```
 charts/20260430_01_plot_bars_power_PV_Wind_2040.png
+
+## 20260507
+```
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260507_03_NZPR_report.docx
+```
