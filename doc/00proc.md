@@ -734,3 +734,10 @@ charts/20260430_01_plot_bars_power_PV_Wind_2040.png
 ```
 pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260507_03_NZPR_report.docx
 ```
+
+## 20260508
+* update SEP numbers (CO2emissions are energy-related)
+```
+python scripts/20260508_03_import_SEP_numbers.py
+```
+outputs/20251218_02_SEP/20260508_03_SEP_numbers.json, 20260508_03_SEP_numbers.xlsx
