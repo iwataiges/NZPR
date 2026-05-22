@@ -741,3 +741,17 @@ pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20
 python scripts/20260508_03_import_SEP_numbers.py
 ```
 outputs/20251218_02_SEP/20260508_03_SEP_numbers.json, 20260508_03_SEP_numbers.xlsx
+
+## 20260520
+* Vashold 2023のGHG emissions projectionとの比較
+python scripts/20260520_01_plot_GHG_total_w_vashold2023.py 
+* 同じく、intensity (GHG emissions per GDP)のprojectionとの比較
+python scripts/20260520_02_plot_GHG_intensity_w_vashold2023.py 
+charts/20260520_01_plot_GHG_total_w_vashold2023.png
+charts/20260520_02_plot_GHG_intensity_w_vashold2023.png
+
+
+## 20260522
+```
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260521_04_NZPR_report.docx
+```
