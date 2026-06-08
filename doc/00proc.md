@@ -755,3 +755,12 @@ charts/20260520_02_plot_GHG_intensity_w_vashold2023.png
 ```
 pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260224_my-reference.docx -o test/20260521_04_NZPR_report.docx
 ```
+
+## 20260608
+
+https://zenn.dev/sky_y/articles/pandoc-advent-2020-bib2
+https://www.zotero.org/styles?q=id%3Asist02
+mv ~/Downloads/sist02.csl doc/csl/
+mv ~/Downloads/experimental-astronomy.csl doc/csl/
+
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260608_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/experimental-astronomy.csl -o test/20260608_09_NZPR_report.docx
