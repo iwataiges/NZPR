@@ -764,3 +764,7 @@ mv ~/Downloads/sist02.csl doc/csl/
 mv ~/Downloads/experimental-astronomy.csl doc/csl/
 
 pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260608_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/experimental-astronomy.csl -o test/20260608_09_NZPR_report.docx
+
+## 20260610
+python scripts/20260610_03_plot_FEC_elec_fraction.py 
+charts/20260610_03_plot_FEC_elec_fraction.png
