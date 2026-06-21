@@ -135,6 +135,7 @@ def plot(df1, df2, df3, df4, df5, df6):
     fs1 = 16
     fs2 = 14
     fs3 = 14
+    fs4 = 24
     lw = 1
 
     for id in list_ids_plot:
@@ -197,7 +198,7 @@ def plot(df1, df2, df3, df4, df5, df6):
         py = np.array([1.085, 1.085])
         ax.plot(px, py, '-', linewidth=lw, color='#333')
 
-        ax.text(tx, -0.02, list_subcatlabel[id], fontsize=fs1, ha='center', va='top')
+        ax.text(tx, -0.02, list_subcatlabel[id], fontsize=fs4, ha='center', va='top')
 #        ax.text(tx+width/2, -0.05, list_subcatlabel[id], fontsize=fs1, ha='center', va='top')
         tx += xstep1
 

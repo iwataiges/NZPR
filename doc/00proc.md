@@ -768,3 +768,77 @@ pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20
 ## 20260610
 python scripts/20260610_03_plot_FEC_elec_fraction.py 
 charts/20260610_03_plot_FEC_elec_fraction.png
+
+## 20260615
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260608_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/experimental-astronomy.csl -o test/20260615_10_NZPR_report.docx
+
+## 20260617
+* capacity and power for RE, updated. see also 1p5CRM/NZPR/20260617work_REstat/ and google doc: 20251120NZPR
+python scripts/20260617_04_plot_RE_bars_capacity_separate.py
+
+## 20260618
+
+* 「現状の延長」での再エネ設備容量、再考 (see 20260331 as well)
+2019-2023, 2020-2024の5年の平均を計算
+scripts/20260618_01_average_RE_cap_additions.py
+
+2019-2023 average: 6.181 0.350 0.024 
+2020-2024 average: 5.282 0.338 0.044 
+
+IRENAの統計は、発電量は2023年までしかない。
+設備容量と発電量で平均の期間が異なることになるが、
+2020-2024で計算する。
+
+year, pv, onsw, offsw
+2030: 121.29   7.60   0.55
+2035: 147.70   9.29   0.77
+2040: 174.11  10.97   0.99
+
+太陽光の設備容量増加は顕著に減少しているため、2024年の増加分実績が継続した場合も入れる。
+2024 additions: 2.533
+2030: 104.80 
+2035: 117.47 
+2040: 130.13 
+
+python scripts/20260617_04_plot_RE_bars_capacity_separate.py 
+charts/20260617_04_plot_RE_bars_capacity_separate.png
+
+* 発電量の増加量、平均値
+python scripts/20260619_01_average_RE_power_additions.py
+
+2019-2023 average: 6.758 0.602 0.000 
+
+2030: 143.77  14.60   0.10
+2035: 177.56  17.61   0.10
+2040: 211.35  20.62   0.10
+
+PVは2023年の増加量でも計算
+2023 additions: 3.856
+2030: 123.45 
+2035: 142.73 
+2040: 162.01 
+
+=> 20260619_06_RE_power_for_plot.xlsx
+python scripts/20260618_05_plot_RE_bars_power_separate.py
+charts/20260618_05_plot_RE_bars_power_separate.png
+
+
+* 設備容量差分 (PV, OnSW)
+python scripts/20260619_01_plot_RE_bars_capacity_additions_separate.py
+charts/20260619_01_plot_RE_bars_capacity_additions_separate.png
+
+* 発電量差分 (PV, OnSW)
+python scripts/20260619_02_plot_RE_bars_power_additions_separate.py
+charts/20260619_02_plot_RE_bars_power_additions_separate.png
+
+## 20260619
+* RE cumlative barsの更新
+scripts/20260619_04_plot_RE_bars_capacity.py 
+charts/20260619_04_plot_RE_bars_capacity.png
+
+scripts/20260619_05_plot_RE_bars_power.py 
+charts/20260619_05_plot_RE_bars_power.png
+
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260608_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/experimental-astronomy.csl -o test/20260619_11_NZPR_report.docx
+
+pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260608_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02.csl -o test/20260619_12_NZPR_report.docx
