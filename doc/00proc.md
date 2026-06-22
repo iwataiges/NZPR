@@ -841,4 +841,4 @@ charts/20260619_05_plot_RE_bars_power.png
 
 pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260608_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/experimental-astronomy.csl -o test/20260619_11_NZPR_report.docx
 
-pandoc doc/report2026/20260224_01_NZPR_report.md --reference-doc=doc/template/20260608_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02.csl -o test/20260619_12_NZPR_report.docx
+pandoc doc/report2026/20260622_02_NZPR_report.md --reference-doc=doc/template/20260622_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260622_13_NZPR_report.docx
