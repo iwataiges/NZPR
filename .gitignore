@@ -214,3 +214,6 @@ __marimo__/
 # 20260224
 test/
 .venv
+
+# 20260625
+.DS_Store
