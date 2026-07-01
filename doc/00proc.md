@@ -851,3 +851,6 @@ python scripts/20260626_01_generate_figure_index.py doc/report2026/20260622_02_N
 python scripts/20260626_02_replace_fig_index.py doc/report2026/20260622_02_NZPR_report.md test/20260626_14_index_fig.txt test/20260622_03_NZPR_report_figindex.md
 
 pandoc test/20260622_03_NZPR_report_figindex.md --reference-doc=doc/template/20260622_my-reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260626_14_NZPR_report.docx
+
+## 20260701
+pandoc doc/report2026/20260628_03_NZPR_report.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260701_15_NZPR_report.docx
