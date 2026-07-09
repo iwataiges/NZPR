@@ -854,3 +854,5 @@ pandoc test/20260622_03_NZPR_report_figindex.md --reference-doc=doc/template/202
 
 ## 20260701
 pandoc doc/report2026/20260628_03_NZPR_report.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260701_15_NZPR_report.docx
+
+pandoc doc/report2026/20260701_04_NZPR_report.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260701_16_NZPR_report.docx
