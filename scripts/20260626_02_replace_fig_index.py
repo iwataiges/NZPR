@@ -7,7 +7,7 @@ def main(input, index, output):
     fig_index = []
     for line in f:
         s = line.split()
-        if len(s) > 0:
+        if line[0] != '#' and len(s) > 0:
             chapter = s[0]
             label = s[1]
             figno = int(s[2])

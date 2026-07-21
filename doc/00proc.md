@@ -859,3 +859,19 @@ pandoc doc/report2026/20260701_04_NZPR_report.md --reference-doc=doc/template/20
 
 ## 20260713
 pandoc doc/report2026/20260713_05_NZPR_report.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260713_17_NZPR_report.docx
+
+## 20260715
+python scripts/20260626_01_generate_figure_index.py doc/report2026/20260715_06_NZPR_report.md > test/20260715_06_index_fig.txt
+python scripts/20260626_02_replace_fig_index.py doc/report2026/20260715_06_NZPR_report.md test/20260715_06_index_fig.txt test/20260715_06_NZPR_figindex.md
+
+pandoc test/20260715_06_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260715_18_NZPR_report.docx
+
+## 20260721
+python scripts/20260626_01_generate_figure_index.py doc/report2026/20260717_07_NZPR_report.md > test/20260717_07_index_fig.txt
+python scripts/20260626_02_replace_fig_index.py doc/report2026/20260717_07_NZPR_report.md test/20260717_07_index_fig.txt test/20260717_07_NZPR_figindex.md
+
+pandoc test/20260717_07_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260721_19_NZPR_report.docx
+
+python scripts/20260626_01_generate_figure_index.py doc/report2026/20260721_08_NZPR_report.md > test/20260721_08_index_fig.txt
+python scripts/20260626_02_replace_fig_index.py doc/report2026/20260721_08_NZPR_report.md test/20260721_08_index_fig.txt test/20260721_08_NZPR_figindex.md
+pandoc test/20260721_08_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260721_20_NZPR_report.docx
