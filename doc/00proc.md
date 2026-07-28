@@ -875,3 +875,10 @@ pandoc test/20260717_07_NZPR_figindex.md --reference-doc=doc/template/20260622re
 python scripts/20260626_01_generate_figure_index.py doc/report2026/20260721_08_NZPR_report.md > test/20260721_08_index_fig.txt
 python scripts/20260626_02_replace_fig_index.py doc/report2026/20260721_08_NZPR_report.md test/20260721_08_index_fig.txt test/20260721_08_NZPR_figindex.md
 pandoc test/20260721_08_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260721_20_NZPR_report.docx
+
+## 20260723
+pandoc doc/report2026/20260723_09_NZPR_report.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260723_21_NZPR_report.docx
+
+## 20260728
+python scripts/20260728_07_plot_price.py
+charts/20260728_07_plot_spot_prices.png
