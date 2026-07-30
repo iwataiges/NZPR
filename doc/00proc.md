@@ -882,3 +882,14 @@ pandoc doc/report2026/20260723_09_NZPR_report.md --reference-doc=doc/template/20
 ## 20260728
 python scripts/20260728_07_plot_price.py
 charts/20260728_07_plot_spot_prices.png
+
+## 20260730
+### changed unit of CO2 intensity (MtCO2/TJ to tCO2/TJ)
+scripts/20260730_11_plot_intensity_energy_total.py
+scripts/20260730_11_plot_intensity_energy_total_EN.py
+scripts/20260730_13_plot_intensity_energy_total.py
+scripts/20260730_13_plot_intensity_energy_total_EN.py
+scripts/20260730_13_plot_intensity_energy_sectors.py
+scripts/20260730_13_plot_intensity_energy_sectors_EN.py
+scripts/20260730_24_plot_intensity_subcat_energy.py
+scripts/20260730_25_plot_intensity_subcat_elec.py
