@@ -893,3 +893,7 @@ scripts/20260730_13_plot_intensity_energy_sectors.py
 scripts/20260730_13_plot_intensity_energy_sectors_EN.py
 scripts/20260730_24_plot_intensity_subcat_energy.py
 scripts/20260730_25_plot_intensity_subcat_elec.py
+
+### energy-related, non-energy-related CO2 emissions and CO2 absorption
+python scripts/20260730_01_plot_bars_GHGI_co2_types.py
+charts/20260730_01_plot_bars_GHGI_co2_types.png
