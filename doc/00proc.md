@@ -897,3 +897,6 @@ scripts/20260730_25_plot_intensity_subcat_elec.py
 ### energy-related, non-energy-related CO2 emissions and CO2 absorption
 python scripts/20260730_01_plot_bars_GHGI_co2_types.py
 charts/20260730_01_plot_bars_GHGI_co2_types.png
+
+## 20260804
+pandoc doc/report2026/20260723_09_NZPR_report.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260804_23_NZPR_report.docx
