@@ -900,3 +900,7 @@ charts/20260730_01_plot_bars_GHGI_co2_types.png
 
 ## 20260804
 pandoc doc/report2026/20260723_09_NZPR_report.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260804_23_NZPR_report.docx
+
+python scripts/20260626_01_generate_figure_index.py doc/report2026/20260723_09_NZPR_report.md > test/20260723_09_index_fig.txt
+python scripts/20260626_02_replace_fig_index.py doc/report2026/20260723_09_NZPR_report.md test/20260723_09_index_fig.txt test/20260723_09_NZPR_figindex.md
+pandoc test/20260723_09_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260804_23_NZPR_report.docx
