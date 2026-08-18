@@ -909,3 +909,8 @@ pandoc test/20260723_09_NZPR_figindex.md --reference-doc=doc/template/20260622re
 python scripts/20260626_01_generate_figure_index.py doc/report2026/NZPR.md > test/20260813_10_index_fig.txt
 python scripts/20260626_02_replace_fig_index.py doc/report2026/NZPR.md test/20260813_10_index_fig.txt test/20260813_10_NZPR_figindex.md
 pandoc test/20260813_10_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260813_24_NZPR_report.docx
+
+## 20260817
+python scripts/20260626_01_generate_figure_index.py doc/report2026/NZPR.md > test/20260817_11_index_fig.txt
+python scripts/20260626_02_replace_fig_index.py doc/report2026/NZPR.md test/20260817_11_index_fig.txt test/20260817_11_NZPR_figindex.md
+pandoc test/20260817_11_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260817_25_NZPR_report.docx
