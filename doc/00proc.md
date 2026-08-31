@@ -919,7 +919,17 @@ pandoc test/20260817_11_NZPR_figindex.md --reference-doc=doc/template/20260622re
 scripts/20260819_09_plot_price.py
 charts/20260819_09_plot_spot_prices.png
 
+## 20260820 Pi charts
+python scripts/20260820_04_plot_GHG_pichart_2030.py           
+python scripts/20260820_05_plot_GHG_pichart_2040.py 
+python scripts/20260820_06_plot_GHG_total_1p5CRM.py 
+charts/20260820_04_plot_GHG_pi_2030.png, 20260820_05_plot_GHG_pi_2040.png, 20260820_06_plot_GHG_total_1p5CRM.png
+
 ## 20260824
 python scripts/20260626_01_generate_figure_index.py doc/report2026/NZPR.md > test/20260824_13_index_fig.txt
 python scripts/20260626_02_replace_fig_index.py doc/report2026/NZPR.md test/20260824_13_index_fig.txt test/20260824_13_NZPR_figindex.md
 pandoc test/20260824_13_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260824_27_NZPR_report.docx
+
+python scripts/20260626_01_generate_figure_index.py doc/report2026/NZPR.md > test/20260824_14_index_fig.txt
+python scripts/20260626_02_replace_fig_index.py doc/report2026/NZPR.md test/20260824_14_index_fig.txt test/20260824_14_NZPR_figindex.md
+pandoc test/20260824_14_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260824_27_NZPR_report.docx
