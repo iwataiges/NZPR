@@ -247,7 +247,11 @@ outputs/20251218_02_SEP/20260116_15_SEP_numbers.json, --.xlsx
 ```
 python scripts/20260122_06_plot_GHG_total.py
 ```
+2014-2024 -27.595271 1303.785707
+2019-2024 -23.551430 1262.417049
 charts/20260122_06_plot_GHG_total.png, 20260122_06_plot_GHG_total_wo_failure2040.png (2040上振れの点なし)
+
+(20260915: 直線近似延長での2030-2040の削減割合: 20260915GHG_extrapolation.xlsx)
 
 ## 20260205
 
@@ -943,3 +947,11 @@ pandoc test/20260831_15_NZPR_figindex.md --reference-doc=doc/template/20260622re
 python scripts/20260902_02_generate_figure_index.py doc/report2026/NZPR.md > test/20260902_16_index_fig.txt
 python scripts/20260626_02_replace_fig_index.py doc/report2026/NZPR.md test/20260902_16_index_fig.txt test/20260902_16_NZPR_figindex.md
 pandoc test/20260902_16_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260902_29_NZPR.docx
+
+## 20260916 FEC / GDP in 2010-2023
+python scripts/20260916_01_plot_FEC_GDP.py
+charts/20260916_01_plot_energy_gdp.png
+
+python scripts/20260902_02_generate_figure_index.py doc/report2026/NZPR.md > test/20260916_30_index_fig.txt
+python scripts/20260626_02_replace_fig_index.py doc/report2026/NZPR.md test/20260916_30_index_fig.txt test/20260916_30_NZPR_figindex.md
+pandoc test/20260916_30_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260916_30_NZPR.docx
