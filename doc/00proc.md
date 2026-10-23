@@ -965,3 +965,27 @@ pandoc test/20260925_32_NZPR_figindex.md --reference-doc=doc/template/20260622re
 python scripts/20260902_02_generate_figure_index.py doc/report2026/NZPR.md > test/20260929_35_index_fig.txt
 python scripts/20260626_02_replace_fig_index.py doc/report2026/NZPR.md test/20260929_35_index_fig.txt test/20260929_35_NZPR_figindex.md
 pandoc test/20260929_35_NZPR_figindex.md --reference-doc=doc/template/20260622reference.docx --citeproc --bibliography=doc/report2026/NZPR.bib --csl=doc/csl/sist02_mod01.csl -o test/20260929_35_NZPR.docx
+
+## 20261021 energy x intensity per sector (figures for a webinar)
+python scripts/20261021_11_plot_energy_boxes.py
+charts/20261021_11_plot_energy_boxes_2013.png
+charts/20261021_11_plot_energy_boxes_2023.png
+charts/20261021_11_plot_energy_boxes_2030_balance.png
+charts/20261021_11_plot_energy_boxes_2030_steps.png
+charts/20261021_11_plot_energy_boxes_2040_balance.png
+charts/20261021_11_plot_energy_boxes_2040_steps.png
+
+## 20261023 English versions
+python scripts/20260527_02_plot_bars_manufacturing_gdp_FY2024_EN.py
+charts/20260527_02_plot_bars_manufacturing_energy_FY2024_EN.png
+charts/20260527_02_plot_bars_manufacturing_gdp_FY2024_EN.png
+charts/20260527_02_plot_bars_manufacturing_gdp_energy_FY2024_EN.png
+
+python scripts/20260610_03_plot_FEC_elec_fraction_EN.py
+charts/20260610_03_plot_FEC_elec_fraction_EN.png
+
+python scripts/20260731_02_plot_bars_co2_power_mix_EN.py 
+charts/20260731_02_plot_bars_co2_power_mix_EN.png
+
+python scripts/20260619_01_plot_RE_bars_capacity_additions_separate_EN.py 
+charts/20260619_01_plot_RE_bars_capacity_additions_separate_EN.png
