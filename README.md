@@ -6,7 +6,9 @@ Net-Zero Progress Report
 This is a repository to provide input data, python scripts, outputs of the scripts (including charts), manuscripts and other related files of the IGES Net-Zero Progress Report for Japan, 2026.
 
 * Japanese title of the report: IGES 日本のネット・ゼロ進捗レポート（2026）温室効果ガス排出削減の進捗状況と必要な対策の検討
-* Report URL: https://www.iges.or.jp/jp/pub/iges-nippon-no-netto-zero-shinchoku-repoto-2026/ja
+* Report URL: https://www.iges.or.jp/jp/pub/iges-netzero-progress-report2026/ja
+* Summary Slides (English): https://www.iges.or.jp/jp/publication_documents/pub/technicalreport/jp/15105/IGES_NetZero_Progress_Report_summary_EN.pdf
+* Summary Slides (Japanese): https://www.iges.or.jp/jp/publication_documents/pub/technicalreport/jp/15105/IGES_NetZero_Progress_Report_2026_summary.pdf
 * DOI: https://doi.org/10.57405/iges-15105
 
 ## Directories and files
